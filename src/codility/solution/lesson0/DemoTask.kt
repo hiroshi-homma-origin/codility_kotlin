@@ -5,9 +5,7 @@ import java.util.*
 object DemoTask {
     fun solutionDemo(A: IntArray): Int {
         var num = 1
-        val hset = HashSet<Int>()
-        for (aA in A) hset.add(aA)
-        while (hset.contains(num)) num++
+        A.toHashSet().apply { while (contains(num)) num++ }
         return num
     }
 }

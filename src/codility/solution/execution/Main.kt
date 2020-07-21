@@ -3,8 +3,6 @@ package codility.solution.execution
 import codility.solution.model.Point2D
 import codility.solution.model.Tree
 
-//---------------------------- Lesson0 DemoTask--------------------------------------- //
-import codility.solution.lesson0.DemoTask.solutionDemo // index 1
 //---------------------------- Lesson1 iterations------------------------------------- //
 import codility.solution.lesson1.BinaryGap.solutionLesson1Ver1 // index 2
 //---------------------------- Lesson2 Arrays----------------------------------------- //
@@ -93,10 +91,6 @@ import codility.solution.lesson99.PolygonConcavityIndex.solutionLesson99Ver4 // 
 object Main {
     @JvmStatic
     fun main(args: Array<String>) {
-        //---------------------------- DemoTask--------------------------------------- //
-        // Demo Task (clear)
-        println("Demo Task")
-        println(solutionDemo(intArrayOf(1, 3, 6, 4, 1, 2)).toString() + "\n------------------")
         //---------------------------- iterations------------------------------------- //
         // BinaryGap (clear)
         println("BinaryGap")
