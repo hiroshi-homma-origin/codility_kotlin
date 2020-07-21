@@ -3,7 +3,7 @@ package codility.solution.lesson91
 import java.util.*
 
 object TreeProduct {
-    fun solution_lesson91_4(A: IntArray, B: IntArray): String {
+    fun solutionLesson91Ver4(A: IntArray, B: IntArray): String {
 
         var a_b_search: Long
         var b_b_search: Long
@@ -13,17 +13,6 @@ object TreeProduct {
         var result = 1
         var decide = 1
 
-        //  配列の入れ替え (Aはグループ,Bは実際の値。)
-        //  new int[] {0,1,1,3,3,6,7}
-        //  new int[] {1,2,3,4,5,3,5}
-        //  new int[] {0,1,2,3}
-        //  new int[] {1,2,3,4}
-        //  の場合は
-        //  A[1, 1, 1, 3, 3, 3, 5]
-        //  B[0, 2, 3, 4, 5, 6, 7]
-        //  A[1, 1, 2, 3]
-        //  B[0, 2, 3, 4]
-        //  のようになる。
         for (aA in A) {
             i++
             a_b_search = Arrays.binarySearch(B, aA).toLong()

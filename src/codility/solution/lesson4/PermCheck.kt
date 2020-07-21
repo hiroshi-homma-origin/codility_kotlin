@@ -3,7 +3,7 @@ package codility.solution.lesson4
 import java.util.*
 
 object PermCheck {
-    fun solution_lesson4_1(A: IntArray): Int {
+    fun solutionLesson4Ver1(A: IntArray): Int {
         val set = HashSet<Int>()
 
         for (aA in A) set.add(aA)

@@ -3,7 +3,7 @@ package codility.solution.lesson1
 //import java.util.*;
 
 object BinaryGap {
-    fun solution_lesson1_1(N: Int): Int {
+    fun solutionLesson1Ver1(N: Int): Int {
         var n = N
         var binaryGap = 0
         var found_one = false

@@ -3,7 +3,7 @@ package codility.solution.lesson90
 import java.util.*
 
 object SlalomSkiing {
-    fun solution_lesson90_3(A: IntArray): Int {
+    fun solutionLesson90Ver3(A: IntArray): Int {
         var i = 0
         val n = A.size
         var `val`: Int

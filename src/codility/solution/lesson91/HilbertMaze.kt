@@ -1,5 +1,5 @@
 package codility.solution.lesson91
 
 object HilbertMaze {
-    fun solution_lesson91_3() = -2
+    fun solutionLesson91Ver3() = -2
 }

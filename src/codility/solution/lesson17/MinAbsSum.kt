@@ -1,7 +1,7 @@
 package codility.solution.lesson17
 
 object MinAbsSum {
-    fun solution_lesson17_2(A: IntArray): Int {
+    fun solutionLesson17Ver2(A: IntArray): Int {
         var i: Int
         var j: Int
         val n = A.size

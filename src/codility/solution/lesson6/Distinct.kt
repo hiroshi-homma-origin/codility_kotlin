@@ -3,7 +3,7 @@ package codility.solution.lesson6
 import java.util.*
 
 object Distinct {
-    fun solution_lesson6_1(A: IntArray): Int {
+    fun solutionLesson6Ver1(A: IntArray): Int {
         if (A.isEmpty()) return 0
         var result = 1
         Arrays.sort(A)

@@ -3,7 +3,7 @@ package codility.solution.lesson99
 import codility.solution.model.Point2D
 
 object PolygonConcavityIndex {
-    fun solution_lesson99_4(A: Array<Point2D>): Int {
+    fun solutionLesson99Ver4(A: Array<Point2D>): Int {
         // write your code in Java SE 8
         val directions = IntArray(A.size)
         var arbiter = 0

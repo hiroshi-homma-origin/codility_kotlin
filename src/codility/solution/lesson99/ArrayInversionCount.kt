@@ -2,7 +2,7 @@ package codility.solution.lesson99
 
 object ArrayInversionCount {
     private val LIMIT = 1000000000
-    fun solution_lesson99_3(A: IntArray): Int {
+    fun solutionLesson99Ver3(A: IntArray): Int {
         val inversionNum = countInversion(A, 0, A.size - 1)
         return if (inversionNum > LIMIT) -1 else inversionNum.toInt()
     }

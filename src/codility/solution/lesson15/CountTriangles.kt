@@ -3,7 +3,7 @@ package codility.solution.lesson15
 import java.util.*
 
 object CountTriangles {
-    fun solution_lesson15_3(A: IntArray): Int {
+    fun solutionLesson15Ver3(A: IntArray): Int {
         var numTriangle = 0
         Arrays.sort(A)
         for (i in 0 until A.size - 2) {

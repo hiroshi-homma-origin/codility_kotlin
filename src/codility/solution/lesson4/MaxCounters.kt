@@ -1,7 +1,7 @@
 package codility.solution.lesson4
 
 object MaxCounters {
-    fun solution_lesson4_3(N: Int, A: IntArray): IntArray {
+    fun solutionLesson4Ver3(N: Int, A: IntArray): IntArray {
         var max = 0
         var min = 0
         val my_array = IntArray(N)

@@ -3,7 +3,7 @@ package codility.solution.lesson11
 import java.util.*
 
 object CountNonDivisible {
-    fun solution_lesson11_1(A: IntArray): IntArray {
+    fun solutionLesson11Ver1(A: IntArray): IntArray {
 
         val map1 = HashMap<Int, Int>()
         for (aA in A) {

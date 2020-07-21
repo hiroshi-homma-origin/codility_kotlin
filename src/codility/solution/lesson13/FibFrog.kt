@@ -4,7 +4,7 @@ import java.util.*
 import java.awt.*
 
 object FibFrog {
-    fun solution_lesson13_1(A: IntArray): Int {
+    fun solutionLesson13Ver1(A: IntArray): Int {
 
         val fibonacci = ArrayList<Int>()
         fibonacci.add(0)

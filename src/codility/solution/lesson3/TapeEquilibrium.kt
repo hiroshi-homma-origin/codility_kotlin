@@ -3,7 +3,7 @@ package codility.solution.lesson3
 //import java.util.*;
 
 object TapeEquilibrium {
-    fun solution_lesson3_3(A: IntArray): Int {
+    fun solutionLesson3Ver3(A: IntArray): Int {
         var sum = 0
         var sum_part_one = 0
         var sum_part_two: Int

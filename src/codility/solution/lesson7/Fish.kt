@@ -4,7 +4,7 @@ package codility.solution.lesson7
 import java.util.*
 
 object Fish {
-    fun solution_lesson7_4(A: IntArray, B: IntArray): Int {
+    fun solutionLesson7Ver4(A: IntArray, B: IntArray): Int {
         if (A.isEmpty()) return 0
         val st = Stack<Int>()
         var numAlive = A.size

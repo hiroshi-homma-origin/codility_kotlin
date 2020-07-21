@@ -1,7 +1,7 @@
 package codility.solution.lesson90
 
 object LongestPassword {
-    fun solution_lesson90_1(S: String): Int {
+    fun solutionLesson90Ver1(S: String): Int {
         val words = S.replace("\\s+".toRegex(), " ").split(" ".toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray()
         var maxLength = -1
         for (word in words) {

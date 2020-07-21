@@ -3,7 +3,7 @@ package codility.solution.lesson3
 //import java.util.*;
 
 object FrogJmp {
-    fun solution_lesson3_2(X: Int, Y: Int, D: Int): Int {
+    fun solutionLesson3Ver2(X: Int, Y: Int, D: Int): Int {
         val difference = (Y - X).toLong()
         var plus: Long = 0
         if (difference % D != 0L) plus = 1

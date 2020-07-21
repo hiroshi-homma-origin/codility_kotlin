@@ -1,7 +1,7 @@
 package codility.solution.lesson2
 
 object OddOccurrencesInArray {
-    fun solution_lesson2_2(A: IntArray): Int {
+    fun solutionLesson2Ver2(A: IntArray): Int {
         if (A.size == 0) return 0
         var unpaired: Int
         unpaired = A[0] // initial

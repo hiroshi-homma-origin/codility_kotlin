@@ -1,7 +1,7 @@
 package codility.solution.lesson5
 
 object MinAvgTwoSlice {
-    fun solution_lesson5_3(A: IntArray): Int {
+    fun solutionLesson5Ver3(A: IntArray): Int {
         var min = Integer.MAX_VALUE.toFloat()
         var min_start_position = 0
         for (i in 0 until A.size - 2) {

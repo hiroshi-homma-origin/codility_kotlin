@@ -3,7 +3,7 @@ package codility.solution.lesson7
 import java.util.*
 
 object StoneWall {
-    fun solution_lesson7_3(H: IntArray): Int {
+    fun solutionLesson7Ver3(H: IntArray): Int {
         val st = Stack<Int>()
         var numBlock = 0
 

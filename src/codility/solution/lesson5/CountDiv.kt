@@ -1,7 +1,7 @@
 package codility.solution.lesson5
 
 object CountDiv {
-    fun solution_lesson5_4(A: Int, B: Int, K: Int): Int {
+    fun solutionLesson5Ver4(A: Int, B: Int, K: Int): Int {
         val result1 = B / K
         val result2 = A / K
         val num_B = Math.floor(result1.toDouble()).toInt()

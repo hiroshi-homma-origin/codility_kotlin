@@ -1,7 +1,7 @@
 package codility.solution.lesson6
 
 object NumberOfDiscIntersections_SimpleLowPerformance {
-    fun solution_lesson6_4_2(A: IntArray): Int {
+    fun solutionLesson6Ver4To2(A: IntArray): Int {
         var intersection = 0
         val lower = LongArray(A.size)
         val upper = LongArray(A.size)

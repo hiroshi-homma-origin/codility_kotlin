@@ -1,7 +1,7 @@
 package codility.solution.lesson14
 
 object MinMaxDivision {
-    fun solution_lesson14_1(K: Int, A: IntArray): Int {
+    fun solutionLesson14Ver1(K: Int, A: IntArray): Int {
         var minSum = 0
         var maxSum = 0
 

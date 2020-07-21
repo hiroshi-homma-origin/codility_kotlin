@@ -3,7 +3,7 @@ package codility.solution.lesson11
 //import java.util.*;
 
 object CountSemiprimes {
-    fun solution_lesson11_2(N: Int, P: IntArray, Q: IntArray): IntArray {
+    fun solutionLesson11Ver2(N: Int, P: IntArray, Q: IntArray): IntArray {
         val primes = erastothenesSieve(N)
         val semiPrimes = IntArray(N + 1)
 

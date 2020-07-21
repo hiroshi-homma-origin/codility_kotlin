@@ -3,7 +3,7 @@ package codility.solution.lesson6
 import java.util.*
 
 object MaxProductOfThree {
-    fun solution_lesson6_3(A: IntArray): Int {
+    fun solutionLesson6Ver3(A: IntArray): Int {
         Arrays.sort(A)
         println(Arrays.toString(A))
         val max_1 = A[A.size - 1] * A[A.size - 2] * A[A.size - 3]

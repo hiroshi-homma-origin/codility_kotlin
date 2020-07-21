@@ -1,5 +1,5 @@
 package codility.solution.lesson92
 
 object ArrayRecovery {
-    fun solution_lesson92_3() = -2
+    fun solutionLesson92Ver3() = -2
 }

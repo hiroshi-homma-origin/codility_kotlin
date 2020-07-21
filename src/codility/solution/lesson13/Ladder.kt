@@ -2,7 +2,7 @@ package codility.solution.lesson13
 
 
 object Ladder {
-    fun solution_lesson13_2(A: IntArray, B: IntArray): IntArray {
+    fun solutionLesson13Ver2(A: IntArray, B: IntArray): IntArray {
 
         val L = A.size
         var max = 0

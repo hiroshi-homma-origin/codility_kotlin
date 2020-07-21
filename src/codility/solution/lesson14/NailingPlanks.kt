@@ -1,7 +1,7 @@
 package codility.solution.lesson14
 
 object NailingPlanks {
-    fun solution_lesson14_2(A: IntArray, B: IntArray, C: IntArray): Int {
+    fun solutionLesson14Ver2(A: IntArray, B: IntArray, C: IntArray): Int {
         val nails = IntArray(2 * C.size + 1)
         var begin = 0
         var end = C.size

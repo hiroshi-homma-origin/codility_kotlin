@@ -3,10 +3,10 @@ package codility.solution.lesson99
 import codility.solution.model.Tree
 
 object TreeHeight {
-    fun solution_lesson99_2(T: Tree?): Int {
+    fun solutionLesson99Ver2(T: Tree?): Int {
         return if (T == null) -1 else 1 + Math.max(
-            solution_lesson99_2(T.l),
-            solution_lesson99_2(T.r)
+            solutionLesson99Ver2(T.l),
+            solutionLesson99Ver2(T.r)
         )
     }
 }

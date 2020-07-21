@@ -3,7 +3,7 @@ package codility.solution.lesson91
 import java.util.*
 
 object RectangleBuilderGreaterArea {
-    fun solution_lesson91_1(A: IntArray, X: Int): Int {
+    fun solutionLesson91Ver1(A: IntArray, X: Int): Int {
         var i = 1
         var j = 0
         var n = A.size

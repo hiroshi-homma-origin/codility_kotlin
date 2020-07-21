@@ -4,7 +4,7 @@ package codility.solution.lesson10
 import java.util.*
 
 object Peaks {
-    fun solution_lesson10_3(A: IntArray): Int {
+    fun solutionLesson10Ver3(A: IntArray): Int {
         val peaksIndexList = ArrayList<Int>()
         for (i in 1 until A.size - 1) {
             if (A[i - 1] < A[i] && A[i] > A[i + 1]) {

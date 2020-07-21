@@ -3,7 +3,7 @@ package codility.solution.lesson15
 import java.util.*
 
 object MinAbsSumOfTwo {
-    fun solution_lesson15_4(A: IntArray): Int {
+    fun solutionLesson15Ver4(A: IntArray): Int {
         Arrays.sort(A)
         var j = A.size - 1
         var result = Integer.MAX_VALUE

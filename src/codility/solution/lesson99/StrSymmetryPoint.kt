@@ -1,7 +1,7 @@
 package codility.solution.lesson99
 
 object StrSymmetryPoint {
-    fun solution_lesson99_1(S: String): Int {
+    fun solutionLesson99Ver1(S: String): Int {
         val length = S.length
         return if (length % 2 != 0 && isPalindrome(S)) {
             length / 2

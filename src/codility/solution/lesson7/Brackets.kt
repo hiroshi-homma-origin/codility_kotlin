@@ -4,7 +4,7 @@ package codility.solution.lesson7
 import java.util.*
 
 object Brackets {
-    fun solution_lesson7_1(S: String): Int {
+    fun solutionLesson7Ver1(S: String): Int {
         if (S.isEmpty()) return 1
         val stack = Stack<Char>()
         for (i in 0 until S.length) {

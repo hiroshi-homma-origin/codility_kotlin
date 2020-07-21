@@ -1,7 +1,7 @@
 package codility.solution.lesson9
 
 object MaxProfit {
-    fun solution_lesson9_2(A: IntArray): Int {
+    fun solutionLesson9Ver2(A: IntArray): Int {
         if (A.size <= 1) return 0
         var minPrice = A[0]
         var maxProfit = 0

@@ -1,5 +1,5 @@
 package codility.solution.lesson92
 
 object DiamondsCount {
-    fun solution_lesson92_4() = -2
+    fun solutionLesson92Ver4() = -2
 }

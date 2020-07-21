@@ -1,7 +1,7 @@
 package codility.solution.lesson10
 
 object CountFactors {
-    fun solution_lesson10_1(N: Int): Int {
+    fun solutionLesson10Ver1(N: Int): Int {
         val sqrtN = Math.sqrt(N.toDouble()).toInt()
         var numFactor = 0
         for (i in 1..sqrtN) {

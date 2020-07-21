@@ -1,7 +1,7 @@
 package codility.solution.lesson15
 
 object CountDistinctSlices {
-    fun solution_lesson15_2(M: Int, A: IntArray): Int {
+    fun solutionLesson15Ver2(M: Int, A: IntArray): Int {
         val seen = BooleanArray(M + 1)
         var leftEnd = 0
         var rightEnd = 0

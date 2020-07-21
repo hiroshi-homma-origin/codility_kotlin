@@ -1,7 +1,7 @@
 package codility.solution.lesson90
 
 object FloodDepth {
-    fun solution_lesson90_2(A: IntArray): Int {
+    fun solutionLesson90Ver2(A: IntArray): Int {
         var maxDepth = 0
         var beginHeight = 0
         var lowestHeight = 0

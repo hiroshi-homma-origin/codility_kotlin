@@ -3,7 +3,7 @@ package codility.solution.lesson6
 import java.util.*
 
 object NumberOfDiscIntersections {
-    fun solution_lesson6_4_1(A: IntArray): Int {
+    fun solutionLesson6Ver4To1(A: IntArray): Int {
         var intersection = 0
         var j = 0
         val lower = LongArray(A.size)

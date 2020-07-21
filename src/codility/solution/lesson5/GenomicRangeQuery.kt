@@ -1,7 +1,7 @@
 package codility.solution.lesson5
 
 object GenomicRangeQuery {
-    fun solution_lesson5_2(S: String, P: IntArray, Q: IntArray): IntArray {
+    fun solutionLesson5Ver2(S: String, P: IntArray, Q: IntArray): IntArray {
         val result = IntArray(P.size)
 
         val A = IntArray(S.length + 1)

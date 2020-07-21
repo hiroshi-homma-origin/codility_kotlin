@@ -1,7 +1,7 @@
 package codility.solution.lesson12
 
 object ChocolatesByNumbers {
-    fun solution_lesson12_1(N: Int, M: Int): Int {
+    fun solutionLesson12Ver1(N: Int, M: Int): Int {
         return N / gcd(N, M)
     }
 

@@ -4,7 +4,7 @@ package codility.solution.lesson7
 import java.util.*
 
 object Nesting {
-    fun solution_lesson7_2(S: String): Int {
+    fun solutionLesson7Ver2(S: String): Int {
 
         if (S.isEmpty())
             return 1

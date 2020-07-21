@@ -1,7 +1,7 @@
 package codility.solution.lesson92
 
 object SocksLaundering {
-    fun solution_lesson92_2(K: Int, C: IntArray, D: IntArray): Int {
+    fun solutionLesson92Ver2(K: Int, C: IntArray, D: IntArray): Int {
         var k = K
         var res = 0
         var maxClean = C[0]

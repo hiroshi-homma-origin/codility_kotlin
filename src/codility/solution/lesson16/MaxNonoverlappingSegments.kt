@@ -1,7 +1,7 @@
 package codility.solution.lesson16
 
 object MaxNonoverlappingSegments {
-    fun solution_lesson16_1(A: IntArray, B: IntArray): Int {
+    fun solutionLesson16Ver1(A: IntArray, B: IntArray): Int {
         if (A.isEmpty()) return 0
         var currentLeftEnd = A[A.size - 1]
         var numNonOverlap = 1

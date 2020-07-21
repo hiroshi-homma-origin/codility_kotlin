@@ -1,7 +1,7 @@
 package codility.solution.lesson17
 
 object NumberSolitaire {
-    fun solution_lesson17_1(A: IntArray): Int {
+    fun solutionLesson17Ver1(A: IntArray): Int {
         val dp = IntArray(A.size)
         dp[0] = A[0]
         for (i in 1 until A.size) {

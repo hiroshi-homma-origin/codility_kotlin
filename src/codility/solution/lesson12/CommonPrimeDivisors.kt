@@ -1,7 +1,7 @@
 package codility.solution.lesson12
 
 object CommonPrimeDivisors {
-    fun solution_lesson12_2(A: IntArray, B: IntArray): Int {
+    fun solutionLesson12Ver2(A: IntArray, B: IntArray): Int {
         var c = 0
         for (i in A.indices) {
             if (A[i] == 1 && B[i] == 1) {

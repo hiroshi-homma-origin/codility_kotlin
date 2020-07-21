@@ -4,7 +4,7 @@ package codility.solution.lesson8
 import java.util.*
 
 object Dominator {
-    fun solution_lesson8_2(A: IntArray): Int {
+    fun solutionLesson8Ver2(A: IntArray): Int {
         val map = HashMap<Int, Int>()
         for (aA in A) {
             if (!map.containsKey(aA)) {

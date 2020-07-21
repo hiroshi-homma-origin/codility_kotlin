@@ -1,7 +1,7 @@
 package codility.solution.lesson5
 
 object PassingCars {
-    fun solution_lesson5_1(A: IntArray): Int {
+    fun solutionLesson5Ver1(A: IntArray): Int {
         var num_east = 0
         var num_pass = 0
         for (aA in A) {

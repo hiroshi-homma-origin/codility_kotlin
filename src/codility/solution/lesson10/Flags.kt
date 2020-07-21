@@ -1,7 +1,7 @@
 package codility.solution.lesson10
 
 object Flags {
-    fun solution_lesson10_4(A: IntArray): Int {
+    fun solutionLesson10Ver4(A: IntArray): Int {
         if (A.size < 3) return 0
 
         val nexts = IntArray(A.size)

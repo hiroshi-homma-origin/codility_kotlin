@@ -5,7 +5,7 @@ import java.util.stream.IntStream
 object DwarfsRafting {
     private var dwarfs: IntArray? = null
     private var capacity: IntArray? = null
-    fun solution_lesson91_2(N: Int, S: String, T: String): Int {
+    fun solutionLesson91Ver2(N: Int, S: String, T: String): Int {
         var s = S
         var t = T
         if (N % 2 == 1) {
