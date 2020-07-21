@@ -3,7 +3,7 @@ package codility.solution.lesson0.demotask
 //---------------------------- Lesson0 DemoTask--------------------------------------- //
 import codility.solution.lesson0.DemoTask.solutionDemo // index 1
 
-object DemoTaskImp {
+object DemoTaskContentsDisplay {
     @JvmStatic
     fun main(args: Array<String>) {
         println("Demo Task")
