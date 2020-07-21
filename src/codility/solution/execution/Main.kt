@@ -91,12 +91,6 @@ import codility.solution.lesson99.PolygonConcavityIndex.solutionLesson99Ver4 // 
 object Main {
     @JvmStatic
     fun main(args: Array<String>) {
-        //---------------------------- iterations------------------------------------- //
-        // BinaryGap (clear)
-        println("BinaryGap")
-        println(solutionLesson1Ver1(1041))
-        println(solutionLesson1Ver1(15))
-        println(solutionLesson1Ver1(32).toString() + "\n------------------")
         //---------------------------- Arrays----------------------------------------- //
         // CyclicRotation (clear)
         println("CyclicRotation")
