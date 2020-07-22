@@ -2,7 +2,7 @@ package codility.solution.lesson1.binaryGap
 
 import codility.solution.lesson1.BinaryGap
 
-object DemoTaskContentsDisplay {
+object BinaryGapContentsDisplay {
     @JvmStatic
     fun main(args: Array<String>) {
         println("BinaryGap")

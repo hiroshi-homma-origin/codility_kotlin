@@ -91,14 +91,6 @@ import codility.solution.lesson99.PolygonConcavityIndex.solutionLesson99Ver4 // 
 object Main {
     @JvmStatic
     fun main(args: Array<String>) {
-        //---------------------------- Arrays----------------------------------------- //
-        // CyclicRotation (clear)
-        println("CyclicRotation")
-        println(solutionLesson2Ver1(intArrayOf(3, 8, 9, 7, 6), 3).contentToString())
-        println(solutionLesson2Ver1(intArrayOf(1, 2, 3, 4), 4).contentToString() + "\n------------------")
-        // OddOccurrencesInArray (clear)
-        println("OddOccurrencesInArray")
-        println(solutionLesson2Ver2(intArrayOf(9, 3, 9, 3, 9, 7, 9)).toString() + "\n------------------")
         //---------------------------- Time_Complexity-------------------------------- //
         // PermMissingElem (clear)
         println("PermMissingElem")

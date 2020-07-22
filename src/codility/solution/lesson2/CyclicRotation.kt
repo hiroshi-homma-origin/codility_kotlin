@@ -2,11 +2,11 @@ package codility.solution.lesson2
 
 object CyclicRotation {
     fun solutionLesson2Ver1(A: IntArray, K: Int): IntArray {
-        val new_array = IntArray(A.size) // a new array
-        for (i in A.indices) {
-            val new_position = (i + K) % A.size // using "mod" to do Cyclic Rotation
-            new_array[new_position] = A[i] // put A[i] to the new position
+        val newArray = IntArray(A.size)
+        A.indices.map {
+            val newPosition = (it + K) % A.size
+            newArray[newPosition] = A[it]
         }
-        return new_array
+        return newArray
     }
 }
