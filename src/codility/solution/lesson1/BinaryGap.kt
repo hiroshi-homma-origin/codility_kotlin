@@ -1,25 +1,37 @@
 package codility.solution.lesson1
 
-//import java.util.*;
-
 object BinaryGap {
     fun solutionLesson1Ver1(N: Int): Int {
-        var n = N
-        var binaryGap = 0
-        var found_one = false
-        var i = 0
-        while (n > i) {
-            if (n % 2 == 0) {
-                i++
-            } else {
-                if (i > binaryGap && found_one) {
-                    binaryGap = i
+        val binary = Integer.toBinaryString(N)
+        var count = 0
+        var tmpCount = 0
+        for (i in Integer.toBinaryString(N).indices) {
+            if (binary[i] == '0') {
+                if (i > 0 && binary[i - 1] == '1') {
+                    tmpCount++
+                } else {
+                    if (tmpCount > 0) tmpCount++
                 }
-                found_one = true
-                i = 0
+            } else if (binary[i] == '1') {
+                if (tmpCount > 0 && tmpCount > count) {
+                    count = tmpCount
+                }
+                tmpCount = 0
             }
-            n /= 2
         }
-        return binaryGap
+        return count
+    }
+
+    fun otherSolutionLesson1Ver1(N: Int): Int {
+        val binaryNumber = Integer.toBinaryString(N)
+        var maxLength = 0
+        val gaps = binaryNumber.replace("0+$".toRegex(), "")
+            .split("1".toRegex()).toTypedArray()
+        for (gap in gaps) {
+            if (gap.isNotEmpty() && gap.length > maxLength) {
+                maxLength = gap.length
+            }
+        }
+        return maxLength
     }
 }
