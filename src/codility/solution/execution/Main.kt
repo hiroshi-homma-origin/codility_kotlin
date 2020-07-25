@@ -91,16 +91,6 @@ import codility.solution.lesson99.PolygonConcavityIndex.solutionLesson99Ver4 // 
 object Main {
     @JvmStatic
     fun main(args: Array<String>) {
-        //---------------------------- Time_Complexity-------------------------------- //
-        // PermMissingElem (clear)
-        println("PermMissingElem")
-        println(solutionLesson3Ver1(intArrayOf(2, 3, 1, 5)).toString() + "\n------------------")
-        // FrogJmp (clear)
-        println("FrogJmp")
-        println(solutionLesson3Ver2(10, 85, 30).toString() + "\n------------------")
-        // TapeEquilibrium (clear)
-        println("TapeEquilibrium")
-        println(solutionLesson3Ver3(intArrayOf(3, 1, 2, 4, 3)).toString() + "\n------------------")
         //---------------------------- Counting_Elements------------------------------ //
         // PermCheck (clear)
         println("PermCheck")

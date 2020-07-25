@@ -5,10 +5,8 @@ package codility.solution.lesson3
 object PermMissingElem {
     fun solutionLesson3Ver1(A: IntArray): Int {
         val range = (A.size + 1).toLong()
-        val floor: Long = 1
-        var missing_num = (range + floor) * range / 2
-
-        for (aA in A) missing_num -= aA
-        return missing_num.toInt()
+        var missingNum = (range + 1) * range / 2
+        A.map { missingNum -= it }
+        return missingNum.toInt()
     }
 }
