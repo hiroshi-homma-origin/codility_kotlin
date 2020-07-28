@@ -1,7 +1,5 @@
 package codility.solution.lesson11
 
-//import java.util.*;
-
 object CountSemiprimes {
     fun solutionLesson11Ver2(N: Int, P: IntArray, Q: IntArray): IntArray {
         val primes = erastothenesSieve(N)
@@ -17,7 +15,7 @@ object CountSemiprimes {
         }
 
         val result = IntArray(P.size)
-        for (index in 0 until Math.min(P.size, Q.size)) {
+        for (index in 0 until P.size.coerceAtMost(Q.size)) {
             result[index] = semiPrimes[Q[index]] - semiPrimes[P[index] - 1]
         }
         return result

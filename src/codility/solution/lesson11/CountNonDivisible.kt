@@ -1,6 +1,6 @@
 package codility.solution.lesson11
 
-import java.util.*
+import kotlin.math.sqrt
 
 object CountNonDivisible {
     fun solutionLesson11Ver1(A: IntArray): IntArray {
@@ -19,7 +19,7 @@ object CountNonDivisible {
         for (n in map1.keys) {
             var numDivisors = 0
 
-            val sqrtN = Math.sqrt(n.toDouble()).toInt()
+            val sqrtN = sqrt(n.toDouble()).toInt()
             for (i in 1..sqrtN) {
                 if (n % i == 0) {
                     val anotherDivisor = n / i

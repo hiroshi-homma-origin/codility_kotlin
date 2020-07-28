@@ -14,37 +14,37 @@ object EquiLeader {
                 map[aA] = map[aA]!! + 1
             }
         }
-        var max_Value = A[0]
-        var max_Count = 1
+        var maxValue = A[0]
+        var maxCount = 1
         for (j in map.keys) {
-            val cur_Count = map[j]
-            if (cur_Count!! > max_Count) {
-                max_Count = cur_Count
-                max_Value = j
+            val curCount = map[j]
+            if (curCount!! > maxCount) {
+                maxCount = curCount
+                maxValue = j
             }
         }
-        val leader_Value: Int
-        val leader_Count: Int
-        if (max_Count > 0.5 * A.size) {
-            leader_Value = max_Value
-            leader_Count = max_Count
+        val leaderValue: Int
+        val leaderCount: Int
+        if (maxCount > 0.5 * A.size) {
+            leaderValue = maxValue
+            leaderCount = maxCount
         } else {
             return 0
         }
-        var num_Equi_leaders = 0
-        var left_Leader_Count = 0
+        var numEquiLeaders = 0
+        var leftLeaderCount = 0
 
         for (i in A.indices) {
-            if (A[i] == leader_Value) {
-                left_Leader_Count++
+            if (A[i] == leaderValue) {
+                leftLeaderCount++
             }
-            if (left_Leader_Count > 0.5 * (i + 1)) {
-                val right_Leader_Count = leader_Count - left_Leader_Count
-                if (right_Leader_Count > 0.5 * (A.size - i - 1)) {
-                    num_Equi_leaders++
+            if (leftLeaderCount > 0.5 * (i + 1)) {
+                val rightLeaderCount = leaderCount - leftLeaderCount
+                if (rightLeaderCount > 0.5 * (A.size - i - 1)) {
+                    numEquiLeaders++
                 }
             }
         }
-        return num_Equi_leaders
+        return numEquiLeaders
     }
 }

@@ -1,8 +1,10 @@
 package codility.solution.lesson10
 
+import kotlin.math.sqrt
+
 object MinPerimeterRectangle {
     fun solutionLesson10Ver2(N: Int): Int {
-        val sqrtN = Math.sqrt(N.toDouble()).toInt()
+        val sqrtN = sqrt(N.toDouble()).toInt()
         var perimeter = 2 + N * 2
         for (i in sqrtN downTo 1) {
             if (N % i == 0) {

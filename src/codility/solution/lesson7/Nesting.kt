@@ -12,7 +12,7 @@ object Nesting {
 
         val st = Stack<Char>()
 
-        for (i in 0 until S.length) {
+        for (i in S.indices) {
             if (S[i] == '(') {
                 st.push(')')
             } else if (S[i] == ')') {

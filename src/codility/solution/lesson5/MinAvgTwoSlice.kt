@@ -3,25 +3,25 @@ package codility.solution.lesson5
 object MinAvgTwoSlice {
     fun solutionLesson5Ver3(A: IntArray): Int {
         var min = Integer.MAX_VALUE.toFloat()
-        var min_start_position = 0
+        var minStartPosition = 0
         for (i in 0 until A.size - 2) {
 
-            val avg_2 = (A[i] + A[i + 1]).toFloat() / 2
-            val avg_3 = (A[i] + A[i + 1] + A[i + 2]).toFloat() / 3
+            val avg2 = (A[i] + A[i + 1]).toFloat() / 2
+            val avg3 = (A[i] + A[i + 1] + A[i + 2]).toFloat() / 3
 
-            val cur_min_avg = Math.min(avg_2, avg_3)
+            val curMinAvg = Math.min(avg2, avg3)
 
-            if (cur_min_avg < min) {
-                min = cur_min_avg
-                min_start_position = i
+            if (curMinAvg < min) {
+                min = curMinAvg
+                minStartPosition = i
             }
         }
 
-        val avg_2 = (A[A.size - 2] + A[A.size - 1]) / 2
-        if (avg_2 < min) {
-            min_start_position = A.size - 2
+        val avg2 = (A[A.size - 2] + A[A.size - 1]) / 2
+        if (avg2 < min) {
+            minStartPosition = A.size - 2
         }
 
-        return min_start_position
+        return minStartPosition
     }
 }

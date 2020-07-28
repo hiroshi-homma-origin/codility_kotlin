@@ -8,7 +8,7 @@ object NumberSolitaire {
             var max = Integer.MIN_VALUE
             for (die in 1..6) {
                 if (i - die >= 0) {
-                    max = Math.max(dp[i - die] + A[i], max)
+                    max = (dp[i - die] + A[i]).coerceAtLeast(max)
                 }
             }
             dp[i] = max

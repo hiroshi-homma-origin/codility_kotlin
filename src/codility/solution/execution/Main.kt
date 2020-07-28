@@ -3,20 +3,7 @@ package codility.solution.execution
 import codility.solution.model.Point2D
 import codility.solution.model.Tree
 
-//---------------------------- Lesson1 iterations------------------------------------- //
-import codility.solution.lesson1.BinaryGap.solutionLesson1Ver1 // index 2
-//---------------------------- Lesson2 Arrays----------------------------------------- //
-import codility.solution.lesson2.CyclicRotation.solutionLesson2Ver1 // index 3
-import codility.solution.lesson2.OddOccurrencesInArray.solutionLesson2Ver2 // index 4
-//---------------------------- Lesson3 Time_Complexity-------------------------------- //
-import codility.solution.lesson3.PermMissingElem.solutionLesson3Ver1 // index 5
-import codility.solution.lesson3.FrogJmp.solutionLesson3Ver2 // index 6
-import codility.solution.lesson3.TapeEquilibrium.solutionLesson3Ver3 // index 7
 //---------------------------- Lesson4 Counting_Elements------------------------------ //
-import codility.solution.lesson4.PermCheck.solutionLesson4Ver1 // index 8
-import codility.solution.lesson4.FrogRiverOne.solutionLesson4Ver2 // index 9
-import codility.solution.lesson4.MaxCounters.solutionLesson4Ver3 // index 10
-import codility.solution.lesson4.MissingInteger.solutionLesson4Ver4 // index 11
 //---------------------------- Lesson5 Prefix Sums--------------------------- //
 import codility.solution.lesson5.PassingCars.solutionLesson5Ver1 // index 12
 import codility.solution.lesson5.GenomicRangeQuery.solutionLesson5Ver2 // index 13
@@ -27,7 +14,7 @@ import codility.solution.lesson6.Distinct.solutionLesson6Ver1 // index 16
 import codility.solution.lesson6.Triangle.solutionLesson6Ver2 // index 17
 import codility.solution.lesson6.MaxProductOfThree.solutionLesson6Ver3 // index 18
 import codility.solution.lesson6.NumberOfDiscIntersections.solutionLesson6Ver4To1 // index 19
-import codility.solution.lesson6.NumberOfDiscIntersections_SimpleLowPerformance.solutionLesson6Ver4To2 // index 20
+import codility.solution.lesson6.NumberOfDiscIntersectionsSimpleLowPerformance.solutionLesson6Ver4To2 // index 20
 //---------------------------- Lesson7 Stack and Queues------------------------------- //
 import codility.solution.lesson7.Brackets.solutionLesson7Ver1 // index 21
 import codility.solution.lesson7.Nesting.solutionLesson7Ver2 // index 22
@@ -91,21 +78,6 @@ import codility.solution.lesson99.PolygonConcavityIndex.solutionLesson99Ver4 // 
 object Main {
     @JvmStatic
     fun main(args: Array<String>) {
-        //---------------------------- Counting_Elements------------------------------ //
-        // PermCheck (clear)
-        println("PermCheck")
-        println(solutionLesson4Ver1(intArrayOf(4, 1, 3, 2)).toString() + "\n------------------")
-        // FrogRiverOne
-        println("FrogRiverOne")
-        println(solutionLesson4Ver2(5, intArrayOf(1, 3, 1, 4, 2, 3, 5, 4)).toString() + "\n------------------")
-        // MaxCounters
-        println("MaxCounters")
-        println(solutionLesson4Ver3(5, intArrayOf(3, 4, 4, 6, 1, 4, 4)).contentToString() + "\n------------------")
-        // MissingInteger
-        println("MissingInteger")
-        println(solutionLesson4Ver4(intArrayOf(1, 3, 6, 4, 1, 2)))
-        println(solutionLesson4Ver4(intArrayOf(1, 2, 3)))
-        println(solutionLesson4Ver4(intArrayOf(-1, -3)).toString() + "\n------------------")
         //---------------------------- Prefix Sums--------------------------- //
         // PassingCars
         println("PassingCars")

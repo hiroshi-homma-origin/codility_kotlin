@@ -7,11 +7,11 @@ object MaxDoubleSliceSum {
         val maxRight = IntArray(A.size)
 
         for (i in 1 until A.size) {
-            maxLeft[i] = Math.max(0, maxLeft[i - 1] + A[i])
+            maxLeft[i] = 0.coerceAtLeast(maxLeft[i - 1] + A[i])
         }
 
         for (i in A.size - 2 downTo 0) {
-            maxRight[i] = Math.max(0, maxRight[i + 1] + A[i])
+            maxRight[i] = 0.coerceAtLeast(maxRight[i + 1] + A[i])
         }
 
         var maxDoubleSlice = 0

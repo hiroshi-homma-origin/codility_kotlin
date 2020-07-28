@@ -1,31 +1,27 @@
 package codility.solution.lesson4
 
 object MaxCounters {
-    fun solutionLesson4Ver3(N: Int, A: IntArray): IntArray {
+    fun solutionLesson4Ver2(N: Int, A: IntArray): IntArray {
         var max = 0
         var min = 0
-        val my_array = IntArray(N)
+        val myArray = IntArray(N)
 
-        for (aA in A) {
-            if (aA in 1..N) {
-                if (my_array[aA - 1] < min) {
-                    my_array[aA - 1] = min
-                }
-                my_array[aA - 1]++
-                if (my_array[aA - 1] > max) {
-                    max = my_array[aA - 1]
-                }
-            } else if (aA == N + 1) {
+        A.forEach {
+            if (it == N + 1) {
                 min = max
+            } else {
+                if (myArray[it - 1] < min) myArray[it - 1] = min
+                myArray[it - 1]++
+                if (myArray[it - 1] > max) max = myArray[it - 1]
             }
+//            println("check_myArray${it}_1:$min")
+//            println("check_myArray${it}_2:$max")
+//            println("check_myArray${it}_3:${myArray.toMutableList()}")
         }
-
-        for (i in my_array.indices) {
-            if (my_array[i] < min) {
-                my_array[i] = min // update it to "min"
-            }
+        myArray.indices.forEach {
+            if (myArray[it] < min) myArray[it] = min
         }
-
-        return my_array
+//        println("check_myArray4:${myArray.toMutableList()}")
+        return myArray
     }
 }

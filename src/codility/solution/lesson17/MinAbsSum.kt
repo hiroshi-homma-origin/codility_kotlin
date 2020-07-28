@@ -1,8 +1,9 @@
 package codility.solution.lesson17
 
+import kotlin.math.abs
+
 object MinAbsSum {
     fun solutionLesson17Ver2(A: IntArray): Int {
-        var i: Int
         var j: Int
         val n = A.size
         var sum = 0
@@ -14,11 +15,11 @@ object MinAbsSum {
         var currentReaches: IntArray
         val reaches: BooleanArray
 
-        i = 0
+        var i = 0
         while (i < n) {
-            A[i] = Math.abs(A[i])
+            A[i] = abs(A[i])
             count[A[i]]++
-            max = Math.max(max, A[i])
+            max = max.coerceAtLeast(A[i])
             sum += A[i]
             i++
         }
@@ -41,7 +42,7 @@ object MinAbsSum {
                 if (reaches[j])
                     currentReaches[j + i] = value
                 else if (currentReaches[j] > 1)
-                    currentReaches[j + i] = Math.max(currentReaches[j + i], currentReaches[j] - 1)
+                    currentReaches[j + i] = currentReaches[j + i].coerceAtLeast(currentReaches[j] - 1)
                 j++
             }
 
@@ -49,7 +50,7 @@ object MinAbsSum {
             while (j <= mid) {
                 if (currentReaches[j] > 0) {
                     reaches[j] = true
-                    maxReached = Math.max(maxReached, j)
+                    maxReached = maxReached.coerceAtLeast(j)
                 }
                 j++
             }

@@ -1,6 +1,5 @@
 package codility.solution.lesson13
 
-
 object Ladder {
     fun solutionLesson13Ver2(A: IntArray, B: IntArray): IntArray {
 
@@ -8,7 +7,7 @@ object Ladder {
         var max = 0
         val results = IntArray(L)
 
-        for (aA in A) max = Math.max(aA, max)
+        for (aA in A) max = aA.coerceAtLeast(max)
         val fibonacci = IntArray(max + 1)
 
         fibonacci[0] = 1

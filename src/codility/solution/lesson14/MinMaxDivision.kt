@@ -7,7 +7,7 @@ object MinMaxDivision {
 
         for (aA in A) {
             maxSum += aA
-            minSum = Math.max(minSum, aA)
+            minSum = minSum.coerceAtLeast(aA)
         }
 
         var possibleResult = maxSum

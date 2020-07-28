@@ -14,20 +14,20 @@ object Dominator {
                 map[aA] = count!! + 1
             }
         }
-        var max_Number = 0
-        var max_Count = 0
+        var maxNumber = 0
+        var maxCount = 0
         for (key in map.keys) {
-            val cur_Count = map[key]
-            if (cur_Count!! > max_Count) {
-                max_Count = cur_Count
-                max_Number = key
+            val curCount = map[key]
+            if (curCount!! > maxCount) {
+                maxCount = curCount
+                maxNumber = key
             }
         }
-        if (max_Count <= A.size / 2) {
+        if (maxCount <= A.size / 2) {
             return -1
         }
         for (i in A.indices) {
-            if (A[i] == max_Number) {
+            if (A[i] == maxNumber) {
                 return i // return the index
             }
         }

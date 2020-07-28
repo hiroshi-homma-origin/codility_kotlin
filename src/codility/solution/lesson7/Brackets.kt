@@ -7,7 +7,7 @@ object Brackets {
     fun solutionLesson7Ver1(S: String): Int {
         if (S.isEmpty()) return 1
         val stack = Stack<Char>()
-        for (i in 0 until S.length) {
+        for (i in S.indices) {
             if (S[i] == '(') {
                 stack.push(')')
             } else if (S[i] == '[') {
