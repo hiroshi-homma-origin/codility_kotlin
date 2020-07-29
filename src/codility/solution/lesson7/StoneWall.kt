@@ -3,21 +3,22 @@ package codility.solution.lesson7
 import java.util.*
 
 object StoneWall {
-    fun solutionLesson7Ver3(H: IntArray): Int {
+    fun solutionLesson7Ver4(H: IntArray): Int {
         val st = Stack<Int>()
         var numBlock = 0
 
-        for (aH in H) {
-            while (!st.isEmpty() && st.peek() > aH) {
+        H.forEach {
+            while (!st.isEmpty() && st.peek() > it) {
                 st.pop()
             }
-            if (st.isEmpty()) {
-                numBlock++
-                st.push(aH)
-            } else if (st.peek() != aH) {
-                if (st.peek() < aH) {
+            when {
+                st.isEmpty() -> {
                     numBlock++
-                    st.push(aH)
+                    st.push(it)
+                }
+                st.peek() < it -> {
+                    numBlock++
+                    st.push(it)
                 }
             }
         }

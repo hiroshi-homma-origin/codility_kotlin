@@ -1,7 +1,5 @@
 package codility.solution.lesson6
 
-import java.util.*
-
 object NumberOfDiscIntersections {
     fun solutionLesson6Ver3(A: IntArray): Int {
         var intersection = 0

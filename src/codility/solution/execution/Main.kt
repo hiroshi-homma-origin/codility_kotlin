@@ -5,9 +5,9 @@ import codility.solution.model.Tree
 
 //---------------------------- Lesson7 Stack and Queues------------------------------- //
 import codility.solution.lesson7.Brackets.solutionLesson7Ver1 // index 21
-import codility.solution.lesson7.Nesting.solutionLesson7Ver2 // index 22
-import codility.solution.lesson7.StoneWall.solutionLesson7Ver3 // index 23
-import codility.solution.lesson7.Fish.solutionLesson7Ver4 // index 24
+import codility.solution.lesson7.Nesting.solutionLesson7Ver3 // index 22
+import codility.solution.lesson7.StoneWall.solutionLesson7Ver4 // index 23
+import codility.solution.lesson7.Fish.solutionLesson7Ver2 // index 24
 //---------------------------- Lesson8 Leader----------------------------------------- //
 import codility.solution.lesson8.EquiLeader.solutionLesson8Ver1 // index 25
 import codility.solution.lesson8.Dominator.solutionLesson8Ver2 // index 26
@@ -43,7 +43,6 @@ import codility.solution.lesson16.TieRopes.solutionLesson16Ver2 // index 47
 //---------------------------- Lesson17 Dynamic programming---------------------------- //
 import codility.solution.lesson17.NumberSolitaire.solutionLesson17Ver1 // index 48
 import codility.solution.lesson17.MinAbsSum.solutionLesson17Ver2 // index 49
-import codility.solution.lesson6.MaxProductOfThree
 //---------------------------- Lesson90 Tasks from Indeed Prime 2015 challenge---------------------------- //
 import codility.solution.lesson90.LongestPassword.solutionLesson90Ver1 // index 50
 import codility.solution.lesson90.FloodDepth.solutionLesson90Ver2 // index 51
@@ -57,7 +56,6 @@ import codility.solution.lesson91.TreeProduct.solutionLesson91Ver4 // index 56
 import codility.solution.lesson92.TennisTournament.solutionLesson92Ver1 // index 57
 import codility.solution.lesson92.SocksLaundering.solutionLesson92Ver2 // index 58
 import codility.solution.lesson92.ArrayRecovery.solutionLesson92Ver3 // index 59
-import codility.solution.lesson92.DiamondsCount.solutionLesson92Ver4 // index 60
 //---------------------------- Lesson99 Future training ---------------------------- //
 import codility.solution.lesson99.StrSymmetryPoint.solutionLesson99Ver1 // index 61
 import codility.solution.lesson99.TreeHeight.solutionLesson99Ver2 // index 62
@@ -73,13 +71,13 @@ object Main {
         println(solutionLesson7Ver1("{[()()]}").toString() + "\n------------------")
         // Nesting
         println("Nesting")
-        println(solutionLesson7Ver2("(()(())())").toString() + "\n------------------")
+        println(solutionLesson7Ver3("(()(())())").toString() + "\n------------------")
         // StoneWall
         println("StoneWall")
-        println(solutionLesson7Ver3(intArrayOf(8, 8, 5, 7, 9, 8, 7, 4, 8)).toString() + "\n------------------")
+        println(solutionLesson7Ver4(intArrayOf(8, 8, 5, 7, 9, 8, 7, 4, 8)).toString() + "\n------------------")
         // Fish
         println("Fish")
-        println(solutionLesson7Ver4(intArrayOf(4, 3, 2, 1, 5), intArrayOf(0, 1, 0, 0, 0)).toString() + "\n------------------")
+        println(solutionLesson7Ver2(intArrayOf(4, 3, 2, 1, 5), intArrayOf(0, 1, 0, 0, 0)).toString() + "\n------------------")
         //---------------------------- Leader----------------------------------------- //
         // EquiLeader
         println("EquiLeader")

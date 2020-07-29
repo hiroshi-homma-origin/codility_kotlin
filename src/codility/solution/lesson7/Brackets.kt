@@ -1,34 +1,19 @@
 package codility.solution.lesson7
 
-// you can also use imports, for example:
-import java.util.*
+import java.util.Deque
+import java.util.ArrayDeque
 
 object Brackets {
     fun solutionLesson7Ver1(S: String): Int {
-        if (S.isEmpty()) return 1
-        val stack = Stack<Char>()
+        val stack: Deque<Char> = ArrayDeque()
         for (i in S.indices) {
-            if (S[i] == '(') {
-                stack.push(')')
-            } else if (S[i] == '[') {
-                stack.push(']')
-            } else if (S[i] == '{') {
-                stack.push('}')
-            } else if (S[i] == ')' || S[i] == ']' || S[i] == '}') {
-                if (stack.isEmpty()) {
-                    return 0
-                } else {
-                    val temp = stack.pop()
-                    if (temp != S[i]) {
-                        return 0
-                    }
-                }
+            when (S[i]) {
+                ')' -> if (stack.isEmpty() || stack.pop() != '(') return 0
+                ']' -> if (stack.isEmpty() || stack.pop() != '[') return 0
+                '}' -> if (stack.isEmpty() || stack.pop() != '{') return 0
+                else -> stack.push(S[i])
             }
         }
-        return if (!stack.isEmpty()) {
-            0
-        } else {
-            1
-        }
+        return if (stack.isEmpty()) 1 else 0
     }
 }

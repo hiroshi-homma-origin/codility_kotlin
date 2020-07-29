@@ -4,32 +4,14 @@ package codility.solution.lesson7
 import java.util.*
 
 object Nesting {
-    fun solutionLesson7Ver2(S: String): Int {
-
-        if (S.isEmpty())
-            return 1
-        else if (S.length % 2 == 1) return 0
-
-        val st = Stack<Char>()
-
+    fun solutionLesson7Ver3(S: String): Int {
+        val stack = Stack<Char>()
         for (i in S.indices) {
-            if (S[i] == '(') {
-                st.push(')')
-            } else if (S[i] == ')') {
-                if (st.isEmpty()) {
-                    return 0
-                } else {
-                    val temp = st.pop()
-                    if (temp != ')') {
-                        return 0
-                    }
-                }
+            when (S[i]) {
+                '(' -> stack.push(S[i])
+                ')' -> if (stack.isEmpty() || stack.peek() != '(') return 0 else stack.pop()
             }
         }
-
-        return if (!st.isEmpty())
-            0
-        else
-            1
+        return if (stack.isEmpty()) 1 else 0
     }
 }
