@@ -4,7 +4,7 @@ package codility.solution.lesson8
 import java.util.*
 
 object EquiLeader {
-    fun solutionLesson8Ver1(A: IntArray): Int {
+    fun solutionLesson8Ver2(A: IntArray): Int {
         if (A.isEmpty()) return 0
         val map = HashMap<Int, Int>()
         for (aA in A) {

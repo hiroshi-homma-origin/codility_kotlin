@@ -3,14 +3,8 @@ package codility.solution.execution
 import codility.solution.model.Point2D
 import codility.solution.model.Tree
 
-//---------------------------- Lesson7 Stack and Queues------------------------------- //
-import codility.solution.lesson7.Brackets.solutionLesson7Ver1 // index 21
-import codility.solution.lesson7.Nesting.solutionLesson7Ver3 // index 22
-import codility.solution.lesson7.StoneWall.solutionLesson7Ver4 // index 23
-import codility.solution.lesson7.Fish.solutionLesson7Ver2 // index 24
 //---------------------------- Lesson8 Leader----------------------------------------- //
-import codility.solution.lesson8.EquiLeader.solutionLesson8Ver1 // index 25
-import codility.solution.lesson8.Dominator.solutionLesson8Ver2 // index 26
+import codility.solution.lesson8.EquiLeader.solutionLesson8Ver2 // index 25
 //---------------------------- Lesson9 Maximum slice problem-------------------------- //
 import codility.solution.lesson9.MaxSliceSum.solutionLesson9Ver1 // index 27
 import codility.solution.lesson9.MaxProfit.solutionLesson9Ver2 // index 28
@@ -43,6 +37,7 @@ import codility.solution.lesson16.TieRopes.solutionLesson16Ver2 // index 47
 //---------------------------- Lesson17 Dynamic programming---------------------------- //
 import codility.solution.lesson17.NumberSolitaire.solutionLesson17Ver1 // index 48
 import codility.solution.lesson17.MinAbsSum.solutionLesson17Ver2 // index 49
+import codility.solution.lesson8.Dominator
 //---------------------------- Lesson90 Tasks from Indeed Prime 2015 challenge---------------------------- //
 import codility.solution.lesson90.LongestPassword.solutionLesson90Ver1 // index 50
 import codility.solution.lesson90.FloodDepth.solutionLesson90Ver2 // index 51
@@ -65,26 +60,13 @@ import codility.solution.lesson99.PolygonConcavityIndex.solutionLesson99Ver4 // 
 object Main {
     @JvmStatic
     fun main(args: Array<String>) {
-        //---------------------------- Stack and Queues------------------------------- //
-        // Brackets
-        println("Brackets")
-        println(solutionLesson7Ver1("{[()()]}").toString() + "\n------------------")
-        // Nesting
-        println("Nesting")
-        println(solutionLesson7Ver3("(()(())())").toString() + "\n------------------")
-        // StoneWall
-        println("StoneWall")
-        println(solutionLesson7Ver4(intArrayOf(8, 8, 5, 7, 9, 8, 7, 4, 8)).toString() + "\n------------------")
-        // Fish
-        println("Fish")
-        println(solutionLesson7Ver2(intArrayOf(4, 3, 2, 1, 5), intArrayOf(0, 1, 0, 0, 0)).toString() + "\n------------------")
         //---------------------------- Leader----------------------------------------- //
         // EquiLeader
         println("EquiLeader")
-        println(solutionLesson8Ver1(intArrayOf(4, 3, 4, 4, 4, 2)).toString() + "\n------------------")
+        println(solutionLesson8Ver2(intArrayOf(4, 3, 4, 4, 4, 2)).toString() + "\n------------------")
         // Dominator
         println("Dominator")
-        println(solutionLesson8Ver2(intArrayOf(3, 4, 3, 2, 3, -1, 3, 3)).toString() + "\n------------------")
+        println(Dominator.solutionLesson8Ver1(intArrayOf(3, 4, 3, 2, 3, -1, 3, 3)).toString() + "\n------------------")
         //---------------------------- Maximum slice problem-------------------------- //
         // MaxSliceSum
         println("MaxSliceSum")

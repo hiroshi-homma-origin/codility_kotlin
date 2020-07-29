@@ -1,23 +1,23 @@
 package codility.solution.lesson8
 
 // you can also use imports, for example:
-import java.util.*
+import kotlin.collections.HashMap
 
 object Dominator {
-    fun solutionLesson8Ver2(A: IntArray): Int {
-        val map = HashMap<Int, Int>()
-        for (aA in A) {
-            if (!map.containsKey(aA)) {
-                map[aA] = 1
+    fun solutionLesson8Ver1(A: IntArray): Int {
+        val countList = HashMap<Int, Int>()
+        A.forEach {
+            if (!countList.containsKey(it)) {
+                countList[it] = 1
             } else {
-                val count = map[aA]
-                map[aA] = count!! + 1
+                val count = countList[it]
+                countList[it] = count!! + 1
             }
         }
         var maxNumber = 0
         var maxCount = 0
-        for (key in map.keys) {
-            val curCount = map[key]
+        for (key in countList.keys) {
+            val curCount = countList[key]
             if (curCount!! > maxCount) {
                 maxCount = curCount
                 maxNumber = key
@@ -26,9 +26,9 @@ object Dominator {
         if (maxCount <= A.size / 2) {
             return -1
         }
-        for (i in A.indices) {
-            if (A[i] == maxNumber) {
-                return i // return the index
+        A.indices.forEach {
+            if(A[it] == maxNumber) {
+                return it
             }
         }
         return -1
