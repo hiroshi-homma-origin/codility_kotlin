@@ -20,6 +20,7 @@ object StoneWall {
                     numBlock++
                     st.push(it)
                 }
+                else -> {}
             }
         }
 
