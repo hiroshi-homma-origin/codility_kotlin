@@ -1,6 +1,6 @@
 package codility.solution.lesson91
 
-import java.util.*
+import kotlin.math.ceil
 
 object RectangleBuilderGreaterArea {
     fun solutionLesson91Ver1(A: IntArray, X: Int): Int {
@@ -18,7 +18,7 @@ object RectangleBuilderGreaterArea {
         if (n < 4)
             return 0
 
-        Arrays.sort(A)
+        A.sort()
         countArrayTemp[0] = intArrayOf(A[0], 1)
 
         while (i < n) {
@@ -44,7 +44,7 @@ object RectangleBuilderGreaterArea {
         i = 0
         while (i < n - 1) {
             value = countArray[i]!![0]
-            needed = Math.ceil(X / value.toDouble()).toInt()
+            needed = ceil(X / value.toDouble()).toInt()
             index = binarySearch(
                 countArray,
                 i + 1,
@@ -62,7 +62,7 @@ object RectangleBuilderGreaterArea {
             i++
         }
 
-        if (i < n && countArray[i]!![1] > 3 && countArray[i]!![0] >= Math.ceil(X / countArray[i]!![0].toDouble()))
+        if (i < n && countArray[i]!![1] > 3 && countArray[i]!![0] >= ceil(X / countArray[i]!![0].toDouble()))
             count++
 
         return if (count > limit) -1 else count
@@ -76,12 +76,11 @@ object RectangleBuilderGreaterArea {
         while (low <= high) {
             mid = (low + high).ushr(1)
             value = a[mid]!![0]
-            if (key > value)
-                low = mid + 1
-            else if (key < value)
-                high = mid - 1
-            else
-                return mid
+            when {
+                key > value -> low = mid + 1
+                key < value -> high = mid - 1
+                else -> return mid
+            }
         }
 
         return low.inv()

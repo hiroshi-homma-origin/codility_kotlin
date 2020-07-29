@@ -3,12 +3,6 @@ package codility.solution.execution
 import codility.solution.model.Point2D
 import codility.solution.model.Tree
 
-//---------------------------- Lesson6 Sorting---------------------------------------- //
-import codility.solution.lesson6.Distinct.solutionLesson6Ver1 // index 16
-import codility.solution.lesson6.Triangle.solutionLesson6Ver2 // index 17
-import codility.solution.lesson6.MaxProductOfThree.solutionLesson6Ver3 // index 18
-import codility.solution.lesson6.NumberOfDiscIntersections.solutionLesson6Ver4To1 // index 19
-import codility.solution.lesson6.NumberOfDiscIntersectionsSimpleLowPerformance.solutionLesson6Ver4To2 // index 20
 //---------------------------- Lesson7 Stack and Queues------------------------------- //
 import codility.solution.lesson7.Brackets.solutionLesson7Ver1 // index 21
 import codility.solution.lesson7.Nesting.solutionLesson7Ver2 // index 22
@@ -49,6 +43,7 @@ import codility.solution.lesson16.TieRopes.solutionLesson16Ver2 // index 47
 //---------------------------- Lesson17 Dynamic programming---------------------------- //
 import codility.solution.lesson17.NumberSolitaire.solutionLesson17Ver1 // index 48
 import codility.solution.lesson17.MinAbsSum.solutionLesson17Ver2 // index 49
+import codility.solution.lesson6.MaxProductOfThree
 //---------------------------- Lesson90 Tasks from Indeed Prime 2015 challenge---------------------------- //
 import codility.solution.lesson90.LongestPassword.solutionLesson90Ver1 // index 50
 import codility.solution.lesson90.FloodDepth.solutionLesson90Ver2 // index 51
@@ -72,21 +67,6 @@ import codility.solution.lesson99.PolygonConcavityIndex.solutionLesson99Ver4 // 
 object Main {
     @JvmStatic
     fun main(args: Array<String>) {
-        //---------------------------- Sorting---------------------------------------- //
-        // Distinct
-        println("Distinct")
-        println(solutionLesson6Ver1(intArrayOf(2, 1, 1, 2, 3, 1)).toString() + "\n------------------")
-        // Triangle
-        println("Triangle")
-        println(solutionLesson6Ver2(intArrayOf(10, 2, 5, 1, 8, 20)).toString() + "\n------------------")
-        println(solutionLesson6Ver2(intArrayOf(10, 50, 5, 1)).toString() + "\n------------------")
-        // MaxProductOfThree
-        println("MaxProductOfThree")
-        println(solutionLesson6Ver3(intArrayOf(-3, 1, 2, -2, 5, 6)).toString() + "\n------------------")
-        // NumberOfDiscIntersections
-        println("NumberOfDiscIntersections")
-        println(solutionLesson6Ver4To1(intArrayOf(1, 5, 2, 1, 4, 0)).toString() + "\n------------------")
-        println(solutionLesson6Ver4To2(intArrayOf(1, 5, 2, 1, 4, 0)).toString() + "\n------------------")
         //---------------------------- Stack and Queues------------------------------- //
         // Brackets
         println("Brackets")
@@ -239,8 +219,8 @@ object Main {
         println(solutionLesson92Ver3().toString() + "\n------------------")
         // DiamondsCount
         println("DiamondsCount")
-        println(solutionLesson92Ver4())
-        println(solutionLesson92Ver4().toString() + "\n------------------")
+//        println(solutionLesson92Ver4())
+//        println(solutionLesson92Ver4().toString() + "\n------------------")
         //---------------------------- Future training ---------------------------- //
         // StrSymmetryPoint
         println("StrSymmetryPoint")
