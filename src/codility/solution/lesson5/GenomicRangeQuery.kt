@@ -1,54 +1,36 @@
 package codility.solution.lesson5
 
 object GenomicRangeQuery {
+
     fun solutionLesson5Ver2(S: String, P: IntArray, Q: IntArray): IntArray {
+        val genome = Array(3) { IntArray(S.length + 1) }
         val result = IntArray(P.size)
 
-        val a = IntArray(S.length + 1)
-        val c = IntArray(S.length + 1)
-        val g = IntArray(S.length + 1)
-        val t = IntArray(S.length + 1)
-        for (i in 0 until S.length) {
-            if (S[i] == 'A') {
-                a[i + 1] = a[i] + 1
-                c[i + 1] = c[i]
-                g[i + 1] = g[i]
-                t[i + 1] = t[i]
-            } else if (S[i] == 'C') {
-                a[i + 1] = a[i]
-                c[i + 1] = c[i] + 1
-                g[i + 1] = g[i]
-                t[i + 1] = t[i]
-            } else if (S[i] == 'G') {
-                a[i + 1] = a[i]
-                c[i + 1] = c[i]
-                g[i + 1] = g[i] + 1
-                t[i + 1] = t[i]
-            } else if (S[i] == 'T') {
-                a[i + 1] = a[i]
-                c[i + 1] = c[i]
-                g[i + 1] = g[i]
-                t[i + 1] = t[i] + 1
+        S.indices.forEach {
+            var a = 0
+            var c = 0
+            var g = 0
+            if ('A' == S[it]) a = 1
+            if ('C' == S[it]) c = 1
+            if ('G' == S[it]) g = 1
+            genome[0][it + 1] = genome[0][it] + a
+            genome[1][it + 1] = genome[1][it] + c
+            genome[2][it + 1] = genome[2][it] + g
+        }
+        P.indices.forEach {
+            when {
+                genome[0][Q[it] + 1] - genome[0][P[it]] > 0 -> {
+                    result[it] = 1
+                }
+                genome[1][Q[it] + 1] - genome[1][P[it]] > 0 -> {
+                    result[it] = 2
+                }
+                genome[2][Q[it] + 1] - genome[2][P[it]] > 0 -> {
+                    result[it] = 3
+                }
+                else -> result[it] = 4
             }
         }
-
-        val num_of_query = P.size
-        for (i in 0 until num_of_query) {
-            val a = a[Q[i] + 1] - a[P[i]]
-            val c = c[Q[i] + 1] - c[P[i]]
-            val g = g[Q[i] + 1] - g[P[i]]
-
-            if (a > 0) {
-                result[i] = 1
-            } else if (c > 0) {
-                result[i] = 2
-            } else if (g > 0) {
-                result[i] = 3
-            } else {
-                result[i] = 4
-            }
-        }
-
         return result
     }
 }

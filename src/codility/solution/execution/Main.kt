@@ -3,12 +3,6 @@ package codility.solution.execution
 import codility.solution.model.Point2D
 import codility.solution.model.Tree
 
-//---------------------------- Lesson4 Counting_Elements------------------------------ //
-//---------------------------- Lesson5 Prefix Sums--------------------------- //
-import codility.solution.lesson5.PassingCars.solutionLesson5Ver1 // index 12
-import codility.solution.lesson5.GenomicRangeQuery.solutionLesson5Ver2 // index 13
-import codility.solution.lesson5.MinAvgTwoSlice.solutionLesson5Ver3 // index 14
-import codility.solution.lesson5.CountDiv.solutionLesson5Ver4 // index 15
 //---------------------------- Lesson6 Sorting---------------------------------------- //
 import codility.solution.lesson6.Distinct.solutionLesson6Ver1 // index 16
 import codility.solution.lesson6.Triangle.solutionLesson6Ver2 // index 17
@@ -78,19 +72,6 @@ import codility.solution.lesson99.PolygonConcavityIndex.solutionLesson99Ver4 // 
 object Main {
     @JvmStatic
     fun main(args: Array<String>) {
-        //---------------------------- Prefix Sums--------------------------- //
-        // PassingCars
-        println("PassingCars")
-        println(solutionLesson5Ver1(intArrayOf(0, 1, 0, 1, 1)).toString() + "\n------------------")
-        // GenomicRangeQuery
-        println("GenomicRangeQuery")
-        println(solutionLesson5Ver2("CAGCCTA", intArrayOf(2, 5, 0), intArrayOf(4, 5, 6)).contentToString() + "\n------------------")
-        // MinAvgTwoSlice
-        println("MinAvgTwoSlice")
-        println(solutionLesson5Ver3(intArrayOf(4, 2, 2, 5, 1, 5, 8)).toString() + "\n------------------")
-        // CountDiv
-        println("CountDiv")
-        println(solutionLesson5Ver4(6, 11, 2).toString() + "\n------------------")
         //---------------------------- Sorting---------------------------------------- //
         // Distinct
         println("Distinct")
