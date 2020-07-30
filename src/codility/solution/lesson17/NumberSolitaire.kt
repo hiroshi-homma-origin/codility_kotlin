@@ -2,18 +2,19 @@ package codility.solution.lesson17
 
 object NumberSolitaire {
     fun solutionLesson17Ver2(A: IntArray): Int {
-        val dp = IntArray(A.size)
-        dp[0] = A[0]
-        for (i in 1 until A.size) {
+        val trial = IntArray(A.size) { A[0] }
+        (1 until A.size).forEach { index ->
             var max = Integer.MIN_VALUE
-            for (die in 1..6) {
-                if (i - die >= 0) {
-                    max = (dp[i - die] + A[i]).coerceAtLeast(max)
+            // Throw the dice
+            (1..6).forEach { dice ->
+                // current number set
+                val current = index - dice
+                if (current >= 0) {
+                    max = (trial[current] + A[index]).coerceAtLeast(max)
                 }
             }
-            dp[i] = max
+            trial[index] = max
         }
-
-        return dp[A.size - 1]
+        return trial[A.size - 1]
     }
 }

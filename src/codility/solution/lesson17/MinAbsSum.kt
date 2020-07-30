@@ -1,62 +1,42 @@
 package codility.solution.lesson17
 
 import kotlin.math.abs
+import kotlin.math.floor
 
 object MinAbsSum {
     fun solutionLesson17Ver1(A: IntArray): Int {
-        var j: Int
-        val n = A.size
-        var sum = 0
-        val mid: Int
-        var max = -1
-        var maxReached = 0
-        var value: Int
-        val count = IntArray(101)
-        var currentReaches: IntArray
-        val reaches: BooleanArray
 
-        var i = 0
-        while (i < n) {
+        var max = 0
+        A.indices.forEach { i ->
             A[i] = abs(A[i])
-            count[A[i]]++
-            max = max.coerceAtLeast(A[i])
-            sum += A[i]
-            i++
+            max = A[i].coerceAtLeast(max)
         }
+        val sum = A.sum()
 
-        mid = sum / 2
-        reaches = BooleanArray(mid + 1)
-        reaches[0] = true
-        i = 1
-        while (i <= max) {
-            value = count[i]
-            if (value == 0) {
-                i++
-                continue
-            }
+        val dp = IntArray(sum + 1) { -1 }
+        dp[0] = 0
+        val count = IntArray(max + 1)
+        var result = sum
+        var check = 0
 
-            currentReaches = IntArray(mid + 1)
-
-            j = 0
-            while (j <= mid - i) {
-                if (reaches[j])
-                    currentReaches[j + i] = value
-                else if (currentReaches[j] > 1)
-                    currentReaches[j + i] = currentReaches[j + i].coerceAtLeast(currentReaches[j] - 1)
-                j++
-            }
-
-            j = 1
-            while (j <= mid) {
-                if (currentReaches[j] > 0) {
-                    reaches[j] = true
-                    maxReached = maxReached.coerceAtLeast(j)
+        A.indices.forEach { i -> count[A[i]] += 1 }
+        (1 until max + 1).forEach { i ->
+            if (count[i] > 0) {
+                (0 until sum).forEach { j->
+                    if (dp[j] >= 0) {
+                        dp[j] = count[i]
+                    } else if (j >= i && dp[j - i] > 0) {
+                        dp[j] = dp[j - i] - 1
+                    }
                 }
-                j++
             }
-            i++
         }
-
-        return sum - 2 * maxReached
+        while (check < floor(sum / 2.toDouble()) + 1) {
+            if (dp[check] >= 0) {
+                result = result.coerceAtMost(sum - 2 * check)
+            }
+            check++
+        }
+        return result
     }
 }
