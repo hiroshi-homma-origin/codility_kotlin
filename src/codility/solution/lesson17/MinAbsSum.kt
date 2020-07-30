@@ -3,7 +3,7 @@ package codility.solution.lesson17
 import kotlin.math.abs
 
 object MinAbsSum {
-    fun solutionLesson17Ver2(A: IntArray): Int {
+    fun solutionLesson17Ver1(A: IntArray): Int {
         var j: Int
         val n = A.size
         var sum = 0

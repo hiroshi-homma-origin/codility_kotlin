@@ -2,18 +2,6 @@ package codility.solution.execution
 
 import codility.solution.model.Point2D
 import codility.solution.model.Tree
-//---------------------------- Lesson15 Caterpillar method----------------------------- //
-import codility.solution.lesson15.AbsDistinct.solutionLesson15Ver1 // index 42
-import codility.solution.lesson15.CountDistinctSlices.solutionLesson15Ver2 // index 43
-import codility.solution.lesson15.CountTriangles.solutionLesson15Ver3 // index 44
-import codility.solution.lesson15.MinAbsSumOfTwo.solutionLesson15Ver4 // index 45
-//---------------------------- Lesson16 Greedy algorithms------------------------------ //
-import codility.solution.lesson16.MaxNonoverlappingSegments.solutionLesson16Ver1 // index 46
-import codility.solution.lesson16.TieRopes.solutionLesson16Ver2 // index 47
-//---------------------------- Lesson17 Dynamic programming---------------------------- //
-import codility.solution.lesson17.NumberSolitaire.solutionLesson17Ver1 // index 48
-import codility.solution.lesson17.MinAbsSum.solutionLesson17Ver2 // index 49
-import codility.solution.lesson9.MaxDoubleSliceSum
 //---------------------------- Lesson90 Tasks from Indeed Prime 2015 challenge---------------------------- //
 import codility.solution.lesson90.LongestPassword.solutionLesson90Ver1 // index 50
 import codility.solution.lesson90.FloodDepth.solutionLesson90Ver2 // index 51
@@ -36,34 +24,6 @@ import codility.solution.lesson99.PolygonConcavityIndex.solutionLesson99Ver4 // 
 object Main {
     @JvmStatic
     fun main(args: Array<String>) {
-        //---------------------------- Caterpillar method----------------------------- //
-        // AbsDistinct
-        println("AbsDistinct")
-        println(solutionLesson15Ver1(intArrayOf(-5, -3, -1, 0, 3, 6)).toString() + "\n------------------")
-        // CountDistinctSlices
-        println("CountDistinctSlices")
-        println(solutionLesson15Ver2(6, intArrayOf(3, 4, 5, 5, 2)).toString() + "\n------------------")
-        // CountTriangles
-        println("CountTriangles")
-        println(solutionLesson15Ver3(intArrayOf(10, 2, 5, 1, 8, 12)).toString() + "\n------------------")
-        // MinAbsSumOfTwo
-        println("MinAbsSumOfTwo")
-        println(solutionLesson15Ver4(intArrayOf(1, 4, -3)))
-        println(solutionLesson15Ver4(intArrayOf(-8, 4, 5, -10, 3)).toString() + "\n------------------")
-        //---------------------------- Greedy algorithms------------------------------ //
-        // MaxNonoverlappingSegments
-        println("MaxNonoverlappingSegments")
-        println(solutionLesson16Ver1(intArrayOf(1, 3, 7, 9, 9), intArrayOf(5, 6, 8, 9, 10)).toString() + "\n------------------")
-        // TieRopes
-        println("TieRopes")
-        println(solutionLesson16Ver2(4, intArrayOf(1, 2, 3, 4, 1, 1, 3)).toString() + "\n------------------")
-        //---------------------------- Dynamic programming---------------------------- //
-        // NumberSolitaire
-        println("NumberSolitaire")
-        println(solutionLesson17Ver1(intArrayOf(1, -2, 0, 9, -1, -2)).toString() + "\n------------------")
-        // MinAbsSum
-        println("MinAbsSum")
-        println(solutionLesson17Ver2(intArrayOf(1, 5, 2, -2)).toString() + "\n------------------")
         //---------------------------- Tasks from Indeed Prime 2015 challenge ---------------------------- //
         // LongestPassword
         println("LongestPassword")
