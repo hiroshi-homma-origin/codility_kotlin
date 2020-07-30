@@ -2,30 +2,6 @@ package codility.solution.execution
 
 import codility.solution.model.Point2D
 import codility.solution.model.Tree
-
-//---------------------------- Lesson8 Leader----------------------------------------- //
-import codility.solution.lesson8.EquiLeader.solutionLesson8Ver2 // index 25
-//---------------------------- Lesson9 Maximum slice problem-------------------------- //
-import codility.solution.lesson9.MaxSliceSum.solutionLesson9Ver1 // index 27
-import codility.solution.lesson9.MaxProfit.solutionLesson9Ver2 // index 28
-import codility.solution.lesson9.MaxDoubleSliceSum.solutionLesson9Ver3 // index 29
-//---------------------------- Lesson10 Prime and composite numbers-------------------- //
-import codility.solution.lesson10.CountFactors.solutionLesson10Ver1 // index 30
-import codility.solution.lesson10.MinPerimeterRectangle.solutionLesson10Ver2 // index 31
-import codility.solution.lesson10.Peaks.solutionLesson10Ver3 // index 32
-import codility.solution.lesson10.Flags.solutionLesson10Ver4 // index 33
-//---------------------------- Lesson11 Sieve of Eratosthenes-------------------------- //
-import codility.solution.lesson11.CountNonDivisible.solutionLesson11Ver1 // index 34
-import codility.solution.lesson11.CountSemiprimes.solutionLesson11Ver2 // index 35
-//---------------------------- Lesson12 Euclidean algorithm---------------------------- //
-import codility.solution.lesson12.ChocolatesByNumbers.solutionLesson12Ver1 // index 36
-import codility.solution.lesson12.CommonPrimeDivisors.solutionLesson12Ver2 // index 37
-//---------------------------- Lesson13 Fibonacci numbers------------------------------ //
-import codility.solution.lesson13.FibFrog.solutionLesson13Ver1 // index 38
-import codility.solution.lesson13.Ladder.solutionLesson13Ver2 // index 39
-//---------------------------- Lesson14 Binary search algorithm------------------------ //
-import codility.solution.lesson14.MinMaxDivision.solutionLesson14Ver1 // index 40
-import codility.solution.lesson14.NailingPlanks.solutionLesson14Ver2 // index 41
 //---------------------------- Lesson15 Caterpillar method----------------------------- //
 import codility.solution.lesson15.AbsDistinct.solutionLesson15Ver1 // index 42
 import codility.solution.lesson15.CountDistinctSlices.solutionLesson15Ver2 // index 43
@@ -37,7 +13,7 @@ import codility.solution.lesson16.TieRopes.solutionLesson16Ver2 // index 47
 //---------------------------- Lesson17 Dynamic programming---------------------------- //
 import codility.solution.lesson17.NumberSolitaire.solutionLesson17Ver1 // index 48
 import codility.solution.lesson17.MinAbsSum.solutionLesson17Ver2 // index 49
-import codility.solution.lesson8.Dominator
+import codility.solution.lesson9.MaxDoubleSliceSum
 //---------------------------- Lesson90 Tasks from Indeed Prime 2015 challenge---------------------------- //
 import codility.solution.lesson90.LongestPassword.solutionLesson90Ver1 // index 50
 import codility.solution.lesson90.FloodDepth.solutionLesson90Ver2 // index 51
@@ -60,64 +36,6 @@ import codility.solution.lesson99.PolygonConcavityIndex.solutionLesson99Ver4 // 
 object Main {
     @JvmStatic
     fun main(args: Array<String>) {
-        //---------------------------- Leader----------------------------------------- //
-        // EquiLeader
-        println("EquiLeader")
-        println(solutionLesson8Ver2(intArrayOf(4, 3, 4, 4, 4, 2)).toString() + "\n------------------")
-        // Dominator
-        println("Dominator")
-        println(Dominator.solutionLesson8Ver1(intArrayOf(3, 4, 3, 2, 3, -1, 3, 3)).toString() + "\n------------------")
-        //---------------------------- Maximum slice problem-------------------------- //
-        // MaxSliceSum
-        println("MaxSliceSum")
-        println(solutionLesson9Ver1(intArrayOf(3, 1, -6, 4, 0)).toString() + "\n------------------")
-        // MaxProfit
-        println("MaxProfit")
-        println(solutionLesson9Ver2(intArrayOf(23171, 21011, 21123, 21366, 21013, 21367)).toString() + "\n------------------")
-        // MaxDoubleSliceSum
-        println("MaxDoubleSliceSum")
-        println(solutionLesson9Ver3(intArrayOf(3, 2, 6, -1, 4, 5, -1, 2)).toString() + "\n------------------")
-        //---------------------------- Prime and composite numbers-------------------- //
-        // CountFactors
-        println("CountFactors")
-        println(solutionLesson10Ver1(24).toString() + "\n------------------")
-        // MinPerimeterRectangle
-        println("MinPerimeterRectangle")
-        println(solutionLesson10Ver2(30).toString() + "\n------------------")
-        // Peaks
-        println("Peaks")
-        println(solutionLesson10Ver3(intArrayOf(1, 2, 3, 4, 3, 4, 1, 2, 3, 4, 6, 2)).toString() + "\n------------------")
-        // Flags
-        println("Flags")
-        println(solutionLesson10Ver4(intArrayOf(1, 5, 3, 4, 3, 4, 1, 2, 3, 4, 6, 2)).toString() + "\n------------------")
-        //---------------------------- Sieve of Eratosthenes-------------------------- //
-        // CountNonDivisible
-        println("CountNonDivisible")
-        println(solutionLesson11Ver1(intArrayOf(3, 1, 2, 3, 6)).contentToString() + "\n------------------")
-        // CountSemiprimes
-        println("CountSemiprimes")
-        println(solutionLesson11Ver2(26, intArrayOf(1, 4, 16), intArrayOf(26, 10, 20)).contentToString() + "\n------------------")
-        //---------------------------- Euclidean algorithm---------------------------- //
-        // ChocolatesByNumbers
-        println("ChocolatesByNumbers")
-        println(solutionLesson12Ver1(10, 4).toString() + "\n------------------")
-        // CommonPrimeDivisors
-        println("CommonPrimeDivisors")
-        println(solutionLesson12Ver2(intArrayOf(15, 10, 3), intArrayOf(75, 30, 5)).toString() + "\n------------------")
-        //---------------------------- Fibonacci numbers------------------------------ //
-        // FibFrog
-        println("FibFrog")
-        println(solutionLesson13Ver1(intArrayOf(0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 0)).toString() + "\n------------------")
-        // Ladder
-        println("Ladder")
-        println(solutionLesson13Ver2(intArrayOf(4, 4, 5, 5, 1), intArrayOf(3, 2, 4, 3, 1)).contentToString() + "\n------------------")
-        //---------------------------- Binary search algorithm------------------------ //
-        // MinMaxDivision
-        println("MinMaxDivision")
-        println(solutionLesson14Ver1(3, intArrayOf(2, 1, 5, 1, 2, 2, 2)).toString() + "\n------------------")
-        // NailingPlanks
-        println("NailingPlanks")
-        println(solutionLesson14Ver2(intArrayOf(1, 4, 5, 8), intArrayOf(4, 5, 9, 10), intArrayOf(4, 6, 7, 10, 2)).toString() + "\n------------------")
         //---------------------------- Caterpillar method----------------------------- //
         // AbsDistinct
         println("AbsDistinct")

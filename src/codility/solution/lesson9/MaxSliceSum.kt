@@ -1,7 +1,7 @@
 package codility.solution.lesson9
 
 object MaxSliceSum {
-    fun solutionLesson9Ver1(A: IntArray): Int {
+    fun solutionLesson9Ver3(A: IntArray): Int {
         var maxEndingPrevious = A[0]
         var maxEndingHere: Int
         var maxSoFar = A[0]

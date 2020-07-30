@@ -1,11 +1,9 @@
 package codility.solution.lesson9
 
 object MaxDoubleSliceSum {
-    fun solutionLesson9Ver3(A: IntArray): Int {
-
+    fun solutionLesson9Ver1(A: IntArray): Int {
         val maxLeft = IntArray(A.size)
         val maxRight = IntArray(A.size)
-
         for (i in 1 until A.size) {
             maxLeft[i] = 0.coerceAtLeast(maxLeft[i - 1] + A[i])
         }
