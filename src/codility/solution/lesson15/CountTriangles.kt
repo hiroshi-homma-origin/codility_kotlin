@@ -1,25 +1,23 @@
 package codility.solution.lesson15
 
-import java.util.*
-
 object CountTriangles {
     fun solutionLesson15Ver3(A: IntArray): Int {
-        var numTriangle = 0
-        Arrays.sort(A)
-        for (i in 0 until A.size - 2) {
-            var leftEnd = i + 1
-            var rightEnd = i + 2
-
-            while (leftEnd < A.size - 1) {
-                if (rightEnd < A.size && A[i] + A[leftEnd] > A[rightEnd]) {
-                    rightEnd++
+        A.sort()
+        var result = 0
+        (A.indices).forEach {
+            var q: Int = it + 1
+            var r: Int = it + 2
+            while (r < A.size) {
+                if (A[it] + A[q] > A[r]) {
+                    result += r - q
+                    r++
                 } else {
-                    numTriangle += (rightEnd - leftEnd - 1)
-                    leftEnd++
+                    q++
+                    if (r == q) r++
                 }
             }
         }
-
-        return numTriangle
+        return result
     }
+
 }

@@ -6,7 +6,7 @@ import kotlin.math.abs
 object AbsDistinct {
     fun solutionLesson15Ver1(A: IntArray): Int {
         val set = HashSet<Int>()
-        for (aA in A) set.add(abs(aA))
+        A.forEach { set.add(abs(it)) }
         return set.size
     }
 }
