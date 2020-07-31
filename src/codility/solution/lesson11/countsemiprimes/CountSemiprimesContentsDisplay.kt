@@ -1,12 +1,18 @@
 package codility.solution.lesson11.countsemiprimes
 
-import codility.solution.lesson13.Ladder
+import codility.solution.lesson11.CountSemiprimes
 
 object CountSemiprimesContentsDisplay {
     @JvmStatic
     fun main(args: Array<String>) {
         //---------------------------- Fibonacci numbers ------------------------------- //
-        println("Ladder")
-        println(Ladder.solutionLesson13Ver2(intArrayOf(4, 4, 5, 5, 1), intArrayOf(3, 2, 4, 3, 1)).contentToString() + "\n------------------")
+        println("CountSemiprimes")
+        println(
+            CountSemiprimes.solutionLesson11Ver2(
+                26,
+                intArrayOf(1, 4, 16),
+                intArrayOf(26, 10, 20)
+            ).contentToString() + "\n------------------"
+        )
     }
 }

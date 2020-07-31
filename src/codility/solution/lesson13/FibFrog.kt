@@ -1,7 +1,7 @@
 package codility.solution.lesson13
 
+import java.awt.Point
 import java.util.*
-import java.awt.*
 
 object FibFrog {
     fun solutionLesson13Ver1(A: IntArray): Int {
@@ -42,5 +42,45 @@ object FibFrog {
 
             index++
         }
+    }
+    fun solutionLesson13Ver1to1(A: IntArray): Int {
+        val fib = IntArray(if (A.size < 2) 2 else A.size + 1)
+        fib[0] = 1
+        fib[1] = 2
+        var fs = 2
+        while (fib[fs - 1] <= A.size) {
+            fib[fs] = fib[fs - 1] + fib[fs - 2]
+            fs++
+        }
+        var result = -1
+        for (i in 0..A.size) {
+            if (i == A.size || A[i] == 1) {
+                var min = Int.MAX_VALUE
+                var j = 0
+                while (j < fs && fib[j] <= i + 1) {
+                    val from = i - fib[j]
+                    if (from == -1) {
+                        min = 1
+                    } else if (A[from] > 0) {
+                        if (A[from] + 1 < min) {
+                            min = A[from] + 1
+                        }
+                    }
+                    j++
+                }
+                if (i < A.size) {
+                    if (min == Int.MAX_VALUE) {
+                        A[i] = 0
+                    } else {
+                        A[i] = min
+                    }
+                } else {
+                    if (min != Int.MAX_VALUE) {
+                        result = min
+                    }
+                }
+            }
+        }
+        return result
     }
 }

@@ -5,19 +5,17 @@ object MinMaxDivision {
         var minSum = 0
         var maxSum = 0
 
-        for (aA in A) {
-            maxSum += aA
-            minSum = minSum.coerceAtLeast(aA)
+        A.forEach {
+            maxSum += it
+            minSum = minSum.coerceAtLeast(it)
+            println("check_sum")
         }
 
         var possibleResult = maxSum
 
         while (minSum <= maxSum) {
-
             val midSum = (minSum + maxSum) / 2
-
-            val ok = checkDivisable(midSum, K, A)
-
+            val ok = check(midSum, K, A)
             if (ok) {
                 possibleResult = midSum
                 maxSum = midSum - 1
@@ -29,18 +27,15 @@ object MinMaxDivision {
         return possibleResult
     }
 
-    private fun checkDivisable(mid: Int, k: Int, a: IntArray): Boolean {
+    private fun check(mid: Int, k: Int, a: IntArray): Boolean {
         var numBlockAllowed = k
         var currentBlockSum = 0
-
-        for (anA in a) {
-            currentBlockSum += anA
-
+        a.forEach {
+            currentBlockSum += it
             if (currentBlockSum > mid) {
                 numBlockAllowed--
-                currentBlockSum = anA
+                currentBlockSum = it
             }
-
             if (numBlockAllowed == 0) {
                 return false
             }

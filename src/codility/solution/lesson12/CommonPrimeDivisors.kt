@@ -6,7 +6,6 @@ object CommonPrimeDivisors {
         for (i in A.indices) {
             if (A[i] == 1 && B[i] == 1) {
                 c++
-                continue
             }
             val g = gcm(A[i], B[i])
             var m = A[i] / g

@@ -2,39 +2,36 @@ package codility.solution.lesson14
 
 object NailingPlanks {
     fun solutionLesson14Ver2(A: IntArray, B: IntArray, C: IntArray): Int {
-        val nails = IntArray(2 * C.size + 1)
-        var begin = 0
-        var end = C.size
+        var minPlanks = 1
+        var maxPlanks: Int = C.size
         var result = -1
-        while (begin <= end) {
-            val middle = (begin + end) / 2
-            for (i in nails.indices) {
-                nails[i] = 0
-            }
-            for (i in 0 until middle) {
-                nails[C[i]] = 1
-            }
-            var counter = 0
-            for (i in nails.indices) {
-                if (nails[i] == 1) {
-                    counter++
-                }
-                nails[i] = counter
-            }
-            var found = true
-            for (i in A.indices) {
-                if (nails[B[i]] - nails[A[i] - 1] == 0) {
-                    found = false
-                    break
-                }
-            }
-            if (found) {
-                end = middle - 1
-                result = middle
+        while (minPlanks <= maxPlanks) {
+            val midPlanks = (maxPlanks + minPlanks) / 2
+            if (allNailed(midPlanks, A, B, C)) {
+                maxPlanks = midPlanks - 1
+                result = midPlanks
             } else {
-                begin = middle + 1
+                minPlanks = midPlanks + 1
             }
         }
         return result
+    }
+
+    private fun allNailed(planksCount: Int, A: IntArray, B: IntArray, C: IntArray): Boolean {
+        // AとB双方で必要なので「2 *」用意する
+        val isNailsMarked = IntArray(2 * C.size + 1)
+        (0 until planksCount).forEach { isNailsMarked[C[it]] = 1 }
+        println("check_isNailsMarked:${isNailsMarked.toMutableList()}")
+        (1 until isNailsMarked.size).forEach {
+            isNailsMarked[it] += isNailsMarked[it - 1]
+        }
+//        println("check_isNailsMarked:${isNailsMarked.toMutableList()}")
+        var allNailed = true
+        var i = 0
+        while (i < A.size && allNailed) {
+            allNailed = isNailsMarked[B[i]] - isNailsMarked[A[i] - 1] > 0
+            i++
+        }
+        return allNailed
     }
 }
