@@ -5,7 +5,7 @@ object CountSemiprimes {
         val primes = erastothenesSieve(N)
         val semiPrimes = IntArray(N + 1)
 
-        for (num in 2..N) {
+        (2..N).forEach { num ->
             semiPrimes[num] = semiPrimes[num - 1]
             if (primes[num] != 0) {
                 if (primes[num / primes[num]] == 0) {
@@ -15,7 +15,7 @@ object CountSemiprimes {
         }
 
         val result = IntArray(P.size)
-        for (index in 0 until P.size.coerceAtMost(Q.size)) {
+        (0 until P.size.coerceAtMost(Q.size)).forEach { index ->
             result[index] = semiPrimes[Q[index]] - semiPrimes[P[index] - 1]
         }
         return result

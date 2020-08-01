@@ -16,7 +16,7 @@ object Dominator {
         }
         var maxNumber = 0
         var maxCount = 0
-        for (key in countList.keys) {
+        countList.keys.forEach { key->
             val curCount = countList[key]
             if (curCount!! > maxCount) {
                 maxCount = curCount

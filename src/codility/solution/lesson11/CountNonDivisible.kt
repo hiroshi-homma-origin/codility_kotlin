@@ -1,49 +1,27 @@
 package codility.solution.lesson11
 
-import kotlin.math.sqrt
-
 object CountNonDivisible {
     fun solutionLesson11Ver1(A: IntArray): IntArray {
-
-        val map1 = HashMap<Int, Int>()
-        for (aA in A) {
-            if (!map1.containsKey(aA)) {
-                map1[aA] = 1
-            } else {
-                map1[aA] = map1[aA]!! + 1
-            }
-        }
-
-        val map2 = HashMap<Int, Int>()
-
-        for (n in map1.keys) {
-            var numDivisors = 0
-
-            val sqrtN = sqrt(n.toDouble()).toInt()
-            for (i in 1..sqrtN) {
-                if (n % i == 0) {
-                    val anotherDivisor = n / i
-
-                    if (map1.containsKey(i)) {
-                        numDivisors += map1[i]!!
-                    }
-                    if (anotherDivisor != i) {
-                        if (map1.containsKey(anotherDivisor)) {
-                            numDivisors += map1[anotherDivisor]!!
-                        }
-                    }
+        val counts = IntArray(A.size * 2 + 1)
+        A.forEach { counts[it]++ }
+        val divisorNums = IntArray(counts.size)
+        var i = 1
+        while (i * i < divisorNums.size) {
+            var j = i * i
+            while (j < divisorNums.size) {
+                divisorNums[j] += counts[i]
+                if (j != i * i) {
+                    divisorNums[j] += counts[j / i]
                 }
+                j += i
             }
-
-            val numNonDivisors = A.size - numDivisors
-            map2[n] = numNonDivisors
+            i++
         }
 
-        val results = IntArray(A.size)
-        for (i in A.indices) {
-            results[i] = map2[A[i]]!!
+        val result = IntArray(A.size)
+        result.indices.forEach {
+            result[it] = A.size - divisorNums[A[it]]
         }
-
-        return results
+        return result
     }
 }

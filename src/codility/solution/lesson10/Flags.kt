@@ -8,7 +8,7 @@ object Flags {
         var next = A.size
         nexts[A.size - 1] = A.size
         var peaks = 0
-        for (i in A.size - 2 downTo 1) {
+        (A.size - 2 downTo 1).forEach { i ->
             if (A[i - 1] < A[i] && A[i] > A[i + 1]) {
                 next = i
                 peaks++

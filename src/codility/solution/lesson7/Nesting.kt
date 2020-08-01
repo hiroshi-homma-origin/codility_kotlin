@@ -6,7 +6,7 @@ import java.util.*
 object Nesting {
     fun solutionLesson7Ver3(S: String): Int {
         val stack = Stack<Char>()
-        for (i in S.indices) {
+        S.indices.forEach { i ->
             when (S[i]) {
                 '(' -> stack.push(S[i])
                 ')' -> if (stack.isEmpty() || stack.peek() != '(') return 0 else stack.pop()

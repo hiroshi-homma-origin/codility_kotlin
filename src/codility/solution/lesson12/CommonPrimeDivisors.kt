@@ -3,10 +3,8 @@ package codility.solution.lesson12
 object CommonPrimeDivisors {
     fun solutionLesson12Ver2(A: IntArray, B: IntArray): Int {
         var c = 0
-        for (i in A.indices) {
-            if (A[i] == 1 && B[i] == 1) {
-                c++
-            }
+        A.indices.forEach { i ->
+            if (A[i] == 1 && B[i] == 1) c++
             val g = gcm(A[i], B[i])
             var m = A[i] / g
             var gcm = g

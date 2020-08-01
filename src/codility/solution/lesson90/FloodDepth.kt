@@ -5,15 +5,14 @@ object FloodDepth {
         var maxDepth = 0
         var beginHeight = 0
         var lowestHeight = 0
-//        val height: Int
-        for (aA in A) {
+        A.forEach {
             when {
-                aA < lowestHeight -> lowestHeight = aA
-                aA < beginHeight -> maxDepth = Math.max(maxDepth, aA - lowestHeight)
+                it < lowestHeight -> lowestHeight = it
+                it < beginHeight -> maxDepth = maxDepth.coerceAtLeast(it - lowestHeight)
                 else -> {
-                    maxDepth = Math.max(maxDepth, beginHeight - lowestHeight)
-                    beginHeight = aA
-                    lowestHeight = aA
+                    maxDepth = maxDepth.coerceAtLeast(beginHeight - lowestHeight)
+                    beginHeight = it
+                    lowestHeight = it
                 }
             }
         }

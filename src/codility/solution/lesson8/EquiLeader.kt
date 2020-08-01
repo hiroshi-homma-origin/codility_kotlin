@@ -7,16 +7,16 @@ object EquiLeader {
     fun solutionLesson8Ver2(A: IntArray): Int {
         if (A.isEmpty()) return 0
         val map = HashMap<Int, Int>()
-        for (aA in A) {
-            if (!map.containsKey(aA)) {
-                map[aA] = 1
+        A.forEach {
+            if (!map.containsKey(it)) {
+                map[it] = 1
             } else {
-                map[aA] = map[aA]!! + 1
+                map[it] = map[it]!! + 1
             }
         }
         var maxValue = A[0]
         var maxCount = 1
-        for (j in map.keys) {
+        map.keys.forEach { j ->
             val curCount = map[j]
             if (curCount!! > maxCount) {
                 maxCount = curCount
@@ -34,7 +34,7 @@ object EquiLeader {
         var numEquiLeaders = 0
         var leftLeaderCount = 0
 
-        for (i in A.indices) {
+        A.indices.forEach { i ->
             if (A[i] == leaderValue) {
                 leftLeaderCount++
             }

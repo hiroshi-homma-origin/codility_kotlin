@@ -14,14 +14,10 @@ object MaxCounters {
                 myArray[it - 1]++
                 if (myArray[it - 1] > max) max = myArray[it - 1]
             }
-//            println("check_myArray${it}_1:$min")
-//            println("check_myArray${it}_2:$max")
-//            println("check_myArray${it}_3:${myArray.toMutableList()}")
         }
         myArray.indices.forEach {
             if (myArray[it] < min) myArray[it] = min
         }
-//        println("check_myArray4:${myArray.toMutableList()}")
         return myArray
     }
 }

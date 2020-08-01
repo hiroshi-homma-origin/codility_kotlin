@@ -6,7 +6,7 @@ object CountFactors {
     fun solutionLesson10Ver1(N: Int): Int {
         val sqrtN = sqrt(N.toDouble()).toInt()
         var numFactor = 0
-        for (i in 1..sqrtN) {
+        (1..sqrtN).forEach { i->
             if (N % i == 0) {
                 numFactor++
             }

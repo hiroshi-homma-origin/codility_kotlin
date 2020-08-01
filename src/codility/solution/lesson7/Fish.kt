@@ -7,7 +7,7 @@ object Fish {
         if (A.isEmpty()) return 0
         val stack = Stack<Int>()
         var numAlive = A.size
-        for (i in A.indices) {
+        A.indices.forEach { i->
             when (B[i]) {
                 1 -> stack.push(A[i])
                 0 -> while (!stack.isEmpty()) {

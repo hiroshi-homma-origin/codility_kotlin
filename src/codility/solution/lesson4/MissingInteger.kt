@@ -1,7 +1,5 @@
 package codility.solution.lesson4
 
-import java.util.*
-
 object MissingInteger {
     fun solutionLesson4Ver3(A: IntArray): Int {
         var num = 1

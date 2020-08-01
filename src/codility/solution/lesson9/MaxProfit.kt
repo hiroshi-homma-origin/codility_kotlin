@@ -6,7 +6,7 @@ object MaxProfit {
         var minPrice = A[0]
         var maxProfit = 0
 
-        for (i in 1 until A.size) {
+        (1 until A.size).forEach { i ->
             if (A[i] < minPrice)
                 minPrice = A[i]
             else {

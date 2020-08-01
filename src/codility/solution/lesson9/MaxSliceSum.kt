@@ -5,7 +5,7 @@ object MaxSliceSum {
         var maxEndingPrevious = A[0]
         var maxEndingHere: Int
         var maxSoFar = A[0]
-        for (i in 1 until A.size) {
+        (1 until A.size).forEach { i ->
             maxEndingHere = A[i].coerceAtLeast(maxEndingPrevious + A[i])
             maxEndingPrevious = maxEndingHere
             maxSoFar = maxSoFar.coerceAtLeast(maxEndingHere)

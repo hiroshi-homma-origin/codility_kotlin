@@ -6,7 +6,7 @@ import java.util.ArrayDeque
 object Brackets {
     fun solutionLesson7Ver1(S: String): Int {
         val stack: Deque<Char> = ArrayDeque()
-        for (i in S.indices) {
+        S.indices.forEach { i->
             when (S[i]) {
                 ')' -> if (stack.isEmpty() || stack.pop() != '(') return 0
                 ']' -> if (stack.isEmpty() || stack.pop() != '[') return 0

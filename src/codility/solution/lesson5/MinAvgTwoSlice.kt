@@ -4,7 +4,7 @@ object MinAvgTwoSlice {
     fun solutionLesson5Ver3(A: IntArray): Int {
         var min = Integer.MAX_VALUE.toFloat()
         var minStartPosition = 0
-        for (i in 0 until A.size - 2) {
+        (0 until A.size - 2).forEach { i->
             val avg2 = (A[i] + A[i + 1]).toFloat() / 2
             val avg3 = (A[i] + A[i + 1] + A[i + 2]).toFloat() / 3
             val curMinAvg = avg2.coerceAtMost(avg3)

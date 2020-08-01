@@ -21,10 +21,7 @@ object NailingPlanks {
         // AとB双方で必要なので「2 *」用意する
         val isNailsMarked = IntArray(2 * C.size + 1)
         (0 until planksCount).forEach { isNailsMarked[C[it]] = 1 }
-        println("check_isNailsMarked:${isNailsMarked.toMutableList()}")
-        (1 until isNailsMarked.size).forEach {
-            isNailsMarked[it] += isNailsMarked[it - 1]
-        }
+        (1 until isNailsMarked.size).forEach { isNailsMarked[it] += isNailsMarked[it - 1] }
 //        println("check_isNailsMarked:${isNailsMarked.toMutableList()}")
         var allNailed = true
         var i = 0

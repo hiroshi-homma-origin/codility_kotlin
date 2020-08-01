@@ -28,7 +28,7 @@ object FibFrog {
 
             val current = queue[index]
 
-            for (n in fibonacci) {
+            fibonacci.forEach { n ->
                 val nextPosition = current.x + n
 
                 if (nextPosition == A.size)
