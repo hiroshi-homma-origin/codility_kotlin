@@ -1,7 +1,5 @@
 package codility.solution.lesson3
 
-//import java.util.*;
-
 object PermMissingElem {
     fun solutionLesson3Ver1(A: IntArray): Int {
         val range = (A.size + 1).toLong()

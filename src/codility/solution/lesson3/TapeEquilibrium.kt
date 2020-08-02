@@ -2,8 +2,6 @@ package codility.solution.lesson3
 
 import kotlin.math.absoluteValue
 
-//import java.util.*;
-
 object TapeEquilibrium {
     fun solutionLesson3Ver3(A: IntArray): Int {
         var sum = A.sum()

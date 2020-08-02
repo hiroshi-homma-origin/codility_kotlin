@@ -1,7 +1,5 @@
 package codility.solution.lesson4
 
-import java.util.*
-
 object PermCheck {
     fun solutionLesson4Ver4(A: IntArray): Int {
         val set = A.toHashSet()

@@ -1,11 +1,10 @@
 package codility.solution.lesson7
 
-import java.util.Deque
-import java.util.ArrayDeque
+import java.util.*
 
 object Brackets {
     fun solutionLesson7Ver1(S: String): Int {
-        val stack: Deque<Char> = ArrayDeque()
+        val stack = Stack<Char>()
         S.indices.forEach { i->
             when (S[i]) {
                 ')' -> if (stack.isEmpty() || stack.pop() != '(') return 0
