@@ -18,7 +18,6 @@ object CountDistinctSlices {
                 seen[A[leftEnd]] = false
                 leftEnd++
             }
-            println("check_numSlice:$numSlice")
         }
 
         return numSlice

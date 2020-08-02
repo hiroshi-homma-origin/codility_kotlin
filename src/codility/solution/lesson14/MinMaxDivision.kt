@@ -8,7 +8,6 @@ object MinMaxDivision {
         A.forEach {
             maxSum += it
             minSum = minSum.coerceAtLeast(it)
-            println("check_sum")
         }
 
         var possibleResult = maxSum

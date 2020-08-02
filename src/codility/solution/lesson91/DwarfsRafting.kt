@@ -4,9 +4,7 @@ object DwarfsRafting {
     private lateinit var dwarfs: IntArray
     private lateinit var capacity: IntArray
     fun solutionLesson91Ver2(N: Int, S: String, T: String): Int {
-        if (N % 2 == 1) {
-            return -1
-        }
+        if (N % 2 == 1) return -1
         S.toLowerCase()
         T.toLowerCase()
         val barrels = parseString(S, N)

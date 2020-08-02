@@ -13,14 +13,10 @@ object NumberOfDiscIntersections {
         }
         upper.sort()
         lower.sort()
-        println("check_upper:${upper.toMutableList()}")
-        println("check_lower:${lower.toMutableList()}")
         A.indices.forEach {
-            println("check_value1:${it}-$j")
             while (j < A.size && upper[it] >= lower[j]) {
                 intersection += j - it
                 j++
-                println("check_value2:${j}_$intersection")
             }
         }
 
