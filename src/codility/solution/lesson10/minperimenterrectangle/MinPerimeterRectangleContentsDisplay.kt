@@ -7,6 +7,6 @@ object MinPerimeterRectangleContentsDisplay {
     fun main(args: Array<String>) {
         //---------------------------- Prime and composite numbers ------------------------------- //
         println("MinPerimeterRectangle")
-        println(MinPerimeterRectangle.solutionLesson10Ver4(30).toString() + "\n------------------")
+        println(MinPerimeterRectangle.solutionLesson10Ver3(30).toString() + "\n------------------")
     }
 }

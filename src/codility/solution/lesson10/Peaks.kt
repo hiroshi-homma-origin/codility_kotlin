@@ -1,10 +1,9 @@
 package codility.solution.lesson10
 
-// you can also use imports, for example:
-import java.util.*
+//import java.util.*
 
 object Peaks {
-    fun solutionLesson10Ver3(A: IntArray): Int {
+    fun solutionLesson10Ver4(A: IntArray): Int {
         val peaksIndexList = ArrayList<Int>()
         (1 until A.size - 1).forEach { i ->
             if (A[i - 1] < A[i] && A[i] > A[i + 1]) {
