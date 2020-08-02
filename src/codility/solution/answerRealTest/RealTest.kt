@@ -56,7 +56,7 @@ private fun solution1to1(S: String): Int {
 private fun solution2(A: IntArray): Int {
     A.sort()
     var result = 0
-    (A.indices).forEach { p ->
+    (0 until A.size - 2).forEach { p ->
         var q: Int = p + 1
         var r: Int = p + 2
         while (r < A.size) {
