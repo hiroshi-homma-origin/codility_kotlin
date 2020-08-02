@@ -5,23 +5,19 @@ import java.util.*
 
 object FibFrog {
     fun solutionLesson13Ver1(A: IntArray): Int {
-
-        val fibonacci = ArrayList<Int>()
-        fibonacci.add(0)
-        fibonacci.add(1)
-
+        val fibonacci = ArrayList<Int>().apply {
+            add(0)
+            add(1)
+        }
         while (true) {
             val temp1 = fibonacci[fibonacci.size - 1]
             val temp2 = fibonacci[fibonacci.size - 2]
             fibonacci.add(temp1 + temp2)
             if (temp1 + temp2 > A.size) break
         }
-
         fibonacci.reverse()
-
         val queue = ArrayList<Point>()
         queue.add(Point(-1, 0))
-
         var index = 0
         while (true) {
             if (index == queue.size) return -1
