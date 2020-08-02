@@ -1,12 +1,17 @@
 package codility.solution.lesson13.ladder
 
-import codility.solution.lesson12.ChocolatesByNumbers
+import codility.solution.lesson13.Ladder
 
 object LadderContentsDisplay {
     @JvmStatic
     fun main(args: Array<String>) {
         //---------------------------- Fibonacci numbers ------------------------------- //
-        println("ChocolatesByNumbers")
-        println(ChocolatesByNumbers.solutionLesson12Ver1(10, 4).toString() + "\n------------------")
+        println("Ladder")
+        println(
+            Ladder.solutionLesson13Ver2(
+                intArrayOf(4, 4, 5, 5, 1),
+                intArrayOf(3, 2, 4, 3, 1)
+            ).contentToString() + "\n------------------"
+        )
     }
 }

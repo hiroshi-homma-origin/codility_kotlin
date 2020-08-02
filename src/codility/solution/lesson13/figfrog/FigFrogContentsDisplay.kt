@@ -1,12 +1,16 @@
 package codility.solution.lesson13.figfrog
 
-import codility.solution.lesson12.ChocolatesByNumbers
+import codility.solution.lesson13.FibFrog
 
 object FigFrogContentsDisplay {
     @JvmStatic
     fun main(args: Array<String>) {
         //---------------------------- Fibonacci numbers ------------------------------- //
-        println("ChocolatesByNumbers")
-        println(ChocolatesByNumbers.solutionLesson12Ver1(10, 4).toString() + "\n------------------")
+        println("FibFrog")
+        println(
+            FibFrog.solutionLesson13Ver1(
+                intArrayOf(0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 0)
+            ).toString() + "\n------------------"
+        )
     }
 }
